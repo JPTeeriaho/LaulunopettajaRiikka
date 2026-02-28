@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#a9bb9b",
+                        "background-light": "#f7f7f7",
+                        "background-dark": "#191b17",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Riikka's Blog | Riikan Blogi</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Navigation -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/20 px-6 md:px-20 py-4 bg-background-light/80 backdrop-blur-md sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-slate-900 dark:text-slate-100">
+<div class="size-6 text-primary">
+<span class="material-symbols-outlined text-3xl">music_note</span>
+</div>
+<h2 class="text-lg font-extrabold leading-tight tracking-tight uppercase">Riikka</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-semibold text-primary border-b-2 border-primary" href="#">Blog</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">About</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Contact</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end gap-6 items-center">
+<label class="hidden lg:flex flex-col min-w-40 h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-full h-full bg-primary/10 border border-primary/20 overflow-hidden">
+<div class="text-slate-500 flex items-center justify-center pl-4">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 border-none bg-transparent focus:ring-0 h-full placeholder:text-slate-400 px-3 text-sm" placeholder="Search / Etsi" value=""/>
+</div>
+</label>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/30" data-alt="Portrait of a smiling woman" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC2Tv-WkYGMarTJHOj2YeJfL6BTa5XcdQj37jn4JSQ9UW4ecxmlJoCkGRdi_Y2b8CTo45YbO5L4kDbJAocaRFtzQgatMBZmS0c_1lMTUcKcTwLF6BaOp4hymAxOqzU4a_9WvZJGujSWbZomxelZXH2B0yVJsKh2IziuH3x1At4KaOHeWOX20tsUpa0Jeq75xG7iN8vh51N5RRo64Ps4KLIU9gX2V8qQTZdsDfwYkXWjMVwqRtIWuW-rzXm3CecRFtWJH_DKXaPIHrGl");'></div>
+</div>
+</header>
+<main class="flex-1">
+<!-- Hero Section -->
+<section class="relative w-full overflow-hidden">
+<div class="relative h-[500px] md:h-[600px] flex items-center justify-center px-4">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-slate-900/40 z-10"></div>
+<div class="w-full h-full bg-cover bg-center" data-alt="Serene landscape with soft morning mist" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAxYXcWuf4evhTuffuV6T56D1UwIHR-dBxRSGs9TTt19Zvswu5_7LMSMUr-AIxIk3fXygXkOsoXop9pYvET-M4IcObz1iuDZshQbkR1wtehkedh9pshCK8any6L9upfeqd95iKE0R_f5bT4dNAucjBHBnxXWoL2jwqdjxFaSASjyL83ZuDzeBQt6ahU07L_YeDk-n4OfE3tDcSOfIFmr9fu2YVYji1wLKmJ-buCWiVGZ6iendDVdFHFPCq59ViVVxkgdDDN6kHXgRh8");'></div>
+</div>
+<div class="relative z-20 flex flex-col gap-6 text-center max-w-4xl animate-fade-in">
+<h1 class="text-white text-5xl md:text-7xl font-extrabold leading-tight tracking-tighter">
+                                Riikka's Blog <span class="block md:inline opacity-80 font-light text-4xl md:text-5xl">/ Riikan Blogi</span>
+</h1>
+<p class="text-white/90 text-lg md:text-xl font-medium max-w-2xl mx-auto leading-relaxed">
+                                Insights on wellness, music, and mindful living. <br class="hidden md:block"/>
+<span class="italic font-normal text-white/80">Ajatuksia hyvinvoinnista, musiikista ja tietoisesta elämästä.</span>
+</p>
+<div class="flex flex-wrap justify-center gap-4 mt-4">
+<button class="flex min-w-[160px] cursor-pointer items-center justify-center rounded-full h-12 px-8 bg-primary text-slate-900 text-base font-bold transition-transform hover:scale-105">
+                                    Explore Posts
+                                </button>
+<button class="flex min-w-[160px] cursor-pointer items-center justify-center rounded-full h-12 px-8 bg-white/20 backdrop-blur-md text-white border border-white/30 text-base font-bold transition-transform hover:scale-105">
+                                    Lue lisää
+                                </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Blog Feed Section -->
+<section class="max-w-6xl mx-auto px-6 py-16 md:py-24">
+<div class="flex items-center justify-between mb-12 border-b border-primary/20 pb-6">
+<h2 class="text-3xl md:text-4xl font-bold tracking-tight">
+                            Latest Writing <span class="text-primary">/</span> <span class="font-normal text-slate-500">Uusimmat</span>
+</h2>
+<div class="hidden md:flex gap-4">
+<span class="px-4 py-2 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider">Wellness</span>
+<span class="px-4 py-2 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider">Music</span>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-16">
+<!-- Post 1 -->
+<div class="flex flex-col md:flex-row gap-8 items-center group">
+<div class="w-full md:w-1/2 overflow-hidden rounded-2xl aspect-[16/10]">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Close up of piano keys in soft lighting" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBjXVAID-ur7HhqOcDHMpPtZigIj6P9iRV91hPPQQx8w2_TOcBa6hr7bNeXvA7oqGbzk6C7R-QtMWlKObpDF5eTBu-RL2Cn_TsdHgGb-7sa_xoi1QyO5HMsUAEkacl5iJmIE7cRzZPX8RarSSLoVJlpi-zKSWh0UjL34E0TIRAg6fpD5XucXQbckYoxDvMbcrVEdna2kse6-PHcXKE0C3DvS07GUvFg6fyyCnwhx6XGmZ0esHLBYUgK2zDJd-vIc2T9Uq9PP5nB2gyM");'></div>
+</div>
+<div class="w-full md:w-1/2 flex flex-col gap-4">
+<span class="text-primary font-bold text-sm tracking-widest uppercase">Music &amp; Mind</span>
+<h3 class="text-2xl md:text-3xl font-bold leading-snug group-hover:text-primary transition-colors">
+                                    The Rhythm of Life: Finding Tempo in Chaos <br/>
+<span class="text-xl md:text-2xl font-medium text-slate-500">Elämän rytmi: Tempon löytäminen kaaoksessa</span>
+</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-3">
+                                    How music theory can teach us about balance in our daily schedules. Understanding the rests between the notes is just as important as the melody itself...
+                                </p>
+<div class="flex items-center gap-4 text-sm text-slate-500 mt-2">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">calendar_today</span> Oct 24, 2023</span>
+<span>•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 8 min read</span>
+</div>
+<button class="mt-4 flex items-center gap-2 text-primary font-bold group/btn">
+                                    Read Full Story / Lue lisää
+                                    <span class="material-symbols-outlined transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Post 2 -->
+<div class="flex flex-col md:flex-row-reverse gap-8 items-center group">
+<div class="w-full md:w-1/2 overflow-hidden rounded-2xl aspect-[16/10]">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Zen stones and a small plant representing wellness" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCGPDIplt7Q_xeUJVPgh-m8VJCCwLDO7VIG_RWQh6qQp9Nsjt4fRQ_bX4Wpi5xKfBats5vW46eGh6TaFbjV2jdkXSoR2jPRyRlt6DfCqpYvrAQrCzGXzohakJtsq0mDCxdHodEsxRLjwkgox-VztkRu9l2pp67j4TQ4hehc1ehVg-jTKScYbfcslj2PqEk3mBVniaxRszu_pJzdfFhjkE_d3bTB8OIYK68ieg2fD4617ithDyzkpt22GDoDfNkDr_jDKsUd8rQckHvi");'></div>
+</div>
+<div class="w-full md:w-1/2 flex flex-col gap-4">
+<span class="text-primary font-bold text-sm tracking-widest uppercase">Mindfulness</span>
+<h3 class="text-2xl md:text-3xl font-bold leading-snug group-hover:text-primary transition-colors">
+                                    Silent Mornings: The Art of Starting Slow <br/>
+<span class="text-xl md:text-2xl font-medium text-slate-500">Hiljaiset aamut: Hitaan aloituksen taito</span>
+</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-3">
+                                    Embracing the silence of the dawn before the digital world wakes up. Why my first hour of the day is strictly analog and how it changed my anxiety levels...
+                                </p>
+<div class="flex items-center gap-4 text-sm text-slate-500 mt-2">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">calendar_today</span> Oct 18, 2023</span>
+<span>•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 5 min read</span>
+</div>
+<button class="mt-4 flex items-center gap-2 text-primary font-bold group/btn">
+                                    Read Full Story / Lue lisää
+                                    <span class="material-symbols-outlined transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Post 3 -->
+<div class="flex flex-col md:flex-row gap-8 items-center group">
+<div class="w-full md:w-1/2 overflow-hidden rounded-2xl aspect-[16/10]">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Old journal and a fountain pen on a wooden desk" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB-_LDY9qTJwN6tkqqfwFrtYexwdGiAshRSWmi2iBv5zCMNuJzDh6QK6TMiCSct3aV5BjV7g1DdSjOPaRwS2cOC4ZgDw6B2i-e5d_y2r6npoebppX4eFVsyJb2JzqKp5t5JQGPlhOPFFlsYEAvCzzL4rzK81FNOYQCPUp7-V_T10DPp7JGVKFJzbxYxXsgRuG9n8Nr9PmskR2OpJ-DXJwnb0BHwSlIm5ptsuX3H_QV2ylxjDm0K0sv3iwblvVdSUOqLB7ykdKg3pi39");'></div>
+</div>
+<div class="w-full md:w-1/2 flex flex-col gap-4">
+<span class="text-primary font-bold text-sm tracking-widest uppercase">Self-Expression</span>
+<h3 class="text-2xl md:text-3xl font-bold leading-snug group-hover:text-primary transition-colors">
+                                    Writing as Therapy: Journaling for the Soul <br/>
+<span class="text-xl md:text-2xl font-medium text-slate-500">Kirjoittaminen terapiana: Sielun päiväkirja</span>
+</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-3">
+                                    The therapeutic benefits of putting pen to paper. How documenting the small joys of Finnish nature helps maintain a positive mindset through the long winters...
+                                </p>
+<div class="flex items-center gap-4 text-sm text-slate-500 mt-2">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">calendar_today</span> Oct 12, 2023</span>
+<span>•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 6 min read</span>
+</div>
+<button class="mt-4 flex items-center gap-2 text-primary font-bold group/btn">
+                                    Read Full Story / Lue lisää
+                                    <span class="material-symbols-outlined transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-20 flex justify-center items-center gap-2">
+<button class="size-10 rounded-full border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="size-10 rounded-full bg-primary flex items-center justify-center text-slate-900 font-bold">1</button>
+<button class="size-10 rounded-full border border-primary/30 flex items-center justify-center text-slate-500 hover:bg-primary/10 transition-colors">2</button>
+<button class="size-10 rounded-full border border-primary/30 flex items-center justify-center text-slate-500 hover:bg-primary/10 transition-colors">3</button>
+<button class="size-10 rounded-full border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</section>
+<!-- Newsletter / Minimal Footer Call to Action -->
+<section class="bg-primary/5 py-20">
+<div class="max-w-4xl mx-auto px-6 text-center">
+<h2 class="text-3xl font-bold mb-4">Stay Inspired / Pysy inspiroituneena</h2>
+<p class="text-slate-600 dark:text-slate-400 mb-8 max-w-lg mx-auto">
+                            Join my monthly newsletter for curated music playlists and mindfulness tips delivered to your inbox.
+                        </p>
+<form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+<input class="flex-1 rounded-full border-primary/20 bg-white dark:bg-background-dark px-6 py-3 focus:ring-primary focus:border-primary" placeholder="Email address / Sähköposti" type="email"/>
+<button class="bg-primary text-slate-900 font-bold px-8 py-3 rounded-full hover:shadow-lg transition-shadow">Subscribe</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-background-light dark:bg-background-dark border-t border-primary/10 py-12 px-6 md:px-20">
+<div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-3">
+<div class="size-5 text-primary">
+<span class="material-symbols-outlined text-2xl">music_note</span>
+</div>
+<span class="font-extrabold uppercase tracking-widest text-sm">Riikka's Blog</span>
+</div>
+<div class="flex gap-8 text-sm font-medium text-slate-500">
+<a class="hover:text-primary" href="#">Instagram</a>
+<a class="hover:text-primary" href="#">Spotify</a>
+<a class="hover:text-primary" href="#">LinkedIn</a>
+</div>
+<p class="text-xs text-slate-400">
+                        © 2023 Riikka. All rights reserved. / Kaikki oikeudet pidätetään.
+                    </p>
+</div>
+</footer>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,62 @@
+---
+interface Props {
+  quote: string;
+  author: string;
+  role?: string;
+  icon?: string;
+  /** "compact" = short card on home, "full" = long-form on palautteet page */
+  variant?: "compact" | "full";
+}
+
+const {
+  quote,
+  author,
+  role,
+  icon = "format_quote",
+  variant = "compact",
+} = Astro.props;
+---
+
+{
+  variant === "compact" ? (
+    <div class="bg-white p-10 rounded-3xl shadow-sm border border-primary/5 flex flex-col justify-between">
+      <div class="space-y-6">
+        <span class="material-symbols-outlined text-primary text-4xl">
+          format_quote
+        </span>
+        <p class="text-slate-600 italic leading-relaxed text-lg">
+          &ldquo;{quote}&rdquo;
+        </p>
+      </div>
+      <div class="mt-8 flex items-center gap-4 border-t border-slate-100 pt-6">
+        <div class="bg-primary/20 p-3 rounded-full">
+          <span class="material-symbols-outlined text-primary">{icon}</span>
+        </div>
+        <div>
+          <h4 class="font-bold text-slate-900">{author}</h4>
+          {role && (
+            <p class="text-sm text-slate-500 uppercase tracking-wider">
+              {role}
+            </p>
+          )}
+        </div>
+      </div>
+    </div>
+  ) : (
+    <div class="bg-white p-10 md:p-16 rounded-xl shadow-sm border border-neutral-beige relative overflow-hidden">
+      <span class="material-symbols-outlined text-8xl absolute -top-4 -left-4 text-terracotta/5 select-none">
+        format_quote
+      </span>
+      <div class="relative z-10">
+        <div class="text-lg md:text-xl text-slate-700 leading-relaxed italic mb-8 space-y-4">
+          {quote.split('\n\n').map((para, i, arr) => (
+            <p>
+              {i === 0 && <Fragment>&ldquo;</Fragment>}{para}{i === arr.length - 1 && <Fragment>&rdquo;</Fragment>}
+            </p>
+          ))}
+        </div>
+        <p class="font-bold text-terracotta text-lg">{author}</p>
+      </div>
+    </div>
+  )
+}

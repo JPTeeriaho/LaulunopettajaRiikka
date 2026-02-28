@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#a9bb9b",
+                        "background-light": "#f7f7f7",
+                        "background-dark": "#191b17",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-primary/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex h-16 items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">brand_awareness</span>
+<span class="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Singing Path</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Confidence</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Beginners</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Genre</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Wellbeing</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Voice Impro</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">language</span>
+</button>
+<div class="h-10 w-10 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center overflow-hidden">
+<img class="h-full w-full object-cover" data-alt="User profile portrait of a smiling woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCW678QSEjWjJRSkGtma6Cb4qpy-VUrVxypEYzoDySRg5rKmQoRN2Z-Opo42vDW9I6HVyEyK407H1luVY0kQTaX8qLuoY_Mn_tw4NaAyp9m3iiMLmOm1r-5tM2OTdPGcd4nhH2orwXsBw2RnMHduSCCI5ROigv9-ViqACGatKzdtg8_W8a85XSZsAz2FgoZYzM_2kyIQOza4kmj8IeerUVsZQDylo1-uxOHSpMRA6f7xQjUaeB1Lt8eqyfAkc06Vr1U_KEIY-865jlK"/>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative w-full h-[70vh] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="Student practicing singing in a bright studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjBhQzZYxipDIS4Zgqs1re5VPCv5ejW59137RY8h_zzCI1TBPnljcSuKacetjAUHIBFx2aRwQRNG5Dbc7OvhNWkb7JhegZi97pn7Bh4cSdZWuSKH9TM5aNwiWyGtromx2vTM3x_UfJ_vFsD0UiwRY8sQ5_uhV_fzz91gwcX8EcMEP0AbIN6XYZ294RGcBnUdhwqivsL7xPPWvgiFSS1yCOqxcy6e77RTLm3F29R8IwhtGsZiKQ6M38_UdlweHm9uS7kVIvtXSlCluW"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 via-background-dark/20 to-transparent"></div>
+</div>
+<div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+<h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
+                Which path is for you? <br/>
+<span class="text-primary font-medium italic text-3xl md:text-5xl block mt-2">Mikä polku sopii sinulle?</span>
+</h1>
+<p class="text-lg md:text-xl text-slate-200 mb-8 max-w-2xl mx-auto font-light">
+                Discover your unique singing journey with our guided expert-led paths. Start your transformation today.
+            </p>
+<button class="bg-primary hover:bg-primary/90 text-background-dark font-bold py-4 px-10 rounded-lg transition-all transform hover:scale-105 shadow-xl">
+                Start Discovery / Aloita tästä
+            </button>
+</div>
+</section>
+<!-- Content Area: The 5 Paths -->
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+<div class="mb-16 text-center">
+<h2 class="text-3xl font-bold mb-4">Explore Our Paths / Tutustu polkuihimme</h2>
+<div class="h-1.5 w-20 bg-primary mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Path 1: Confidence -->
+<div class="group bg-white dark:bg-slate-800/50 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700">
+<div class="h-56 relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A woman singing confidently on a small stage" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1tKMzZt-c46tRgk7uuVJmtPsS5_YNf8s82KeFvnhjRVxl-wupJnVaydwDFQq7lDXG0YHCripMEpWWhQqv4HcXe5XBUi4jShHku_mWxkdYgcaWSiHj81Baxjd8VcDnfbaBH8x4XvbbjK_qa2zaBgF4qp_rkUyW1Ue3d45X8xyeycPYqqVnhS3NH4iK7TJ4aRyN1QiZ9hBWyJbsDYtTTAb8HiNOUXpPK4vD49T1O8N0WsXf1XBhjiQ48Jv0A8OyS0eWbd_yQ6vMhsB7"/>
+<div class="absolute top-4 left-4 bg-primary text-background-dark text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Most Popular</div>
+</div>
+<div class="p-8">
+<h3 class="text-xl font-bold mb-2">Confidence / Itsevarmuus</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm mb-6 leading-relaxed">
+                        Overcome stage fright and find your authentic voice. Build the courage to sing anywhere.
+                        <span class="block mt-2 italic">Voita esiintymisjännitys ja löydä aito äänesi.</span>
+</p>
+<button class="w-full py-3 px-4 border-2 border-primary text-primary hover:bg-primary hover:text-background-dark font-bold rounded-lg transition-colors flex items-center justify-center gap-2">
+                        Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Path 2: Beginners -->
+<div class="group bg-white dark:bg-slate-800/50 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700">
+<div class="h-56 relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Beginner student learning musical scales" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiiwFjkBVfCRSyqDq6CDOVcYpz4F3Vom1GYzZho5FlsEdbXsoEmhC3q7BxOfQmLFWePT_Ov7q-zHHG622HtTrBuNGMqSpO7Pnva4zmMYOajJ05kKWWJMs6sEa18OT3qr85jF2au2lWZKyDIl6frVGE9lJdUOh0sdkSQ3IP2pyrSkZH1P7iTN_qhsdLmI9evP-wWIBaFNjfCiblRKgudVgW5ZOKDuoKWh29gODPMdasfJcUvSoTPtkcf12PsqgGikn5tW_2GzrBv70G"/>
+</div>
+<div class="p-8">
+<h3 class="text-xl font-bold mb-2">Beginners / Aloittelijat</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm mb-6 leading-relaxed">
+                        Start your journey here. Learn the basics of breath, pitch, and posture from scratch.
+                        <span class="block mt-2 italic">Aloita matkasi tästä. Opi hengityksen ja sävelpuhtauden perusteet.</span>
+</p>
+<button class="w-full py-3 px-4 border-2 border-primary text-primary hover:bg-primary hover:text-background-dark font-bold rounded-lg transition-colors flex items-center justify-center gap-2">
+                        Start Here <span class="material-symbols-outlined text-sm">play_circle</span>
+</button>
+</div>
+</div>
+<!-- Path 3: Genre -->
+<div class="group bg-white dark:bg-slate-800/50 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700">
+<div class="h-56 relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A jazz singer with a vintage microphone" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkX5Bys5DWMHokIL1SVU-Pfyh8bLl47aStl-ni9h0ndyFkNel7bTSmgRJ5GYXNnt6u5-flb97F147xBpGRpD_RtF_vG7qv6V0XxgccjeXup1CpIGfa5Ul6h15yX5zSZ7Bqkz_vO1jg8NErIeKu6gcHRLTQuPalJxvIoUN4gMNcb8Ki4oDI68dUYTWwKk6XJP8ym3IoImBJHKPmKM9mdLp61VNpKUuSgpoWmfwQJjlS2jqgrBSB5xFmhVX6Kv7W9KBjBH4dfS9mJaFf"/>
+</div>
+<div class="p-8">
+<h3 class="text-xl font-bold mb-2">Genre / Tyylilajit</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm mb-6 leading-relaxed">
+                        Explore Jazz, Pop, Rock or Classical styles. Master the techniques unique to each genre.
+                        <span class="block mt-2 italic">Tutustu jazziin, poppiin tai klassiseen musiikkiin.</span>
+</p>
+<button class="w-full py-3 px-4 border-2 border-primary text-primary hover:bg-primary hover:text-background-dark font-bold rounded-lg transition-colors flex items-center justify-center gap-2">
+                        Explore Styles <span class="material-symbols-outlined text-sm">library_music</span>
+</button>
+</div>
+</div>
+<!-- Path 4: Wellbeing -->
+<div class="group bg-white dark:bg-slate-800/50 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700">
+<div class="h-56 relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Person singing outdoors in a peaceful forest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkLP4yoC4ifIWrTBpxFB67DHjRJ1KXzpp-WtcoltC9jCljddvHTsvxDxnxkhoDVv0mRuemSHCv6ZHzuPA070VEt3LOVmcVi3V9Jvi5DtV_LFWvFyseNXNPMg3XM1_Bdo7lN7lG8rwHSoxJ99bLYdTwp9EShsjo8Q2hVoGUfySfxTtqQseh4Y767UxGScGng2E6CI6bVa5SpApJxEnid148Maqywhc6t9RWuCszTwhXeAdaWYAaGyh3IlZ00LAf-_gzUPjmKYeUpunk"/>
+</div>
+<div class="p-8">
+<h3 class="text-xl font-bold mb-2">Wellbeing / Hyvinvointi</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm mb-6 leading-relaxed">
+                        Sing for your health and mindfulness. Use your voice as a tool for relaxation and joy.
+                        <span class="block mt-2 italic">Laula terveytesi ja läsnäolon puoleksi.</span>
+</p>
+<button class="w-full py-3 px-4 border-2 border-primary text-primary hover:bg-primary hover:text-background-dark font-bold rounded-lg transition-colors flex items-center justify-center gap-2">
+                        Sing for Joy <span class="material-symbols-outlined text-sm">self_improvement</span>
+</button>
+</div>
+</div>
+<!-- Path 5: Voice Impro -->
+<div class="group bg-white dark:bg-slate-800/50 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700">
+<div class="h-56 relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Abstract image of light reflecting on water" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBX2cjqkrkFnW0i2TQLaX_yI6qpM_saFjQTKuYsTo7VIp5ptfwz599bDsTZNheYpm-kG4RENLgqRCWRhrswKKgzP7Q6-rff1czHCPN-76y7npB0IqZqdZSEnICj_z3wzxxWOg6kAy0VT4knSTr-8p3Q95T9WxH444ubuzHUIbP4wPeu5pZrNYPxDSV9rOmaJGoNXHBV1wqmEOc95CrWv2qF1eeb2msLF1aEwb7PSZ1b7rx19TDDPYwk305c12hs1QOJxPDlqtN83mXt"/>
+</div>
+<div class="p-8">
+<h3 class="text-xl font-bold mb-2">Voice Impro / Improvisaatio</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm mb-6 leading-relaxed">
+                        Free your expression and create music in the moment. No mistakes, only discoveries.
+                        <span class="block mt-2 italic">Vapauta ilmaisusi ja luo musiikkia tässä hetkessä.</span>
+</p>
+<button class="w-full py-3 px-4 border-2 border-primary text-primary hover:bg-primary hover:text-background-dark font-bold rounded-lg transition-colors flex items-center justify-center gap-2">
+                        Go Creative <span class="material-symbols-outlined text-sm">auto_awesome</span>
+</button>
+</div>
+</div>
+<!-- CTA Card -->
+<div class="bg-primary/10 rounded-xl p-8 border-2 border-dashed border-primary/30 flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-5xl text-primary mb-4">help_outline</span>
+<h3 class="text-xl font-bold mb-2">Not sure where to start?</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400 mb-6 italic">Epäröitkö vielä mistä aloittaa?</p>
+<button class="bg-primary text-background-dark font-bold py-3 px-6 rounded-lg hover:shadow-lg transition-all">
+                    Take the Quiz
+                </button>
+</div>
+</div>
+</main>
+<!-- Side-by-Side Showcase -->
+<section class="bg-primary/5 py-20 overflow-hidden">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col lg:flex-row items-center gap-16">
+<div class="flex-1 space-y-6">
+<div class="inline-block px-4 py-1 bg-primary/20 text-primary font-bold rounded-full text-sm">Our Philosophy</div>
+<h2 class="text-3xl md:text-4xl font-extrabold leading-tight">Your voice is your unique instrument. / Äänesi on ainutlaatuinen instrumenttisi.</h2>
+<p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                        We believe that everyone has a voice that deserves to be heard. Our paths are designed to meet you where you are, whether you're a bathroom singer or a budding professional.
+                    </p>
+<div class="space-y-4">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<div>
+<span class="font-bold">Expert Coaching</span>
+<p class="text-sm opacity-80 italic">Asiantunteva valmennus</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<div>
+<span class="font-bold">Holistic Approach</span>
+<p class="text-sm opacity-80 italic">Kokonaisvaltainen lähestymistapa</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex-1 relative">
+<div class="grid grid-cols-2 gap-4">
+<img class="w-full aspect-[3/4] object-cover rounded-xl shadow-lg transform translate-y-8" data-alt="Close up of a person singing with emotion" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoYaM9U0X2YEteQH9S5jw-ROAKx1Udtw-mcX_3ojW_b6KOnTFB7LdbmIid6J8ewus0eAwmz8FYlUNDzbk2Fxmj8dQaHJ-KiAN2MN5x1NpK_CIFYdhIuzHp8VqfyXnmHi2bjbxuqvvPmjQUl-yA-xTYaemGUY6yCZ7Vt_KRvDfB7vximljcnVhKpCtxN2C_kB8KwP7lwWqPjzOf-xFqsiea4eCfR2kuKvoXW6hqQOK7AVf6w83-oktQ4gJKoJGbHhhdZ2-1aNG-MPzx"/>
+<img class="w-full aspect-[3/4] object-cover rounded-xl shadow-lg" data-alt="Student holding a music sheet while singing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMDowxwtMNubml9a9zY_TNR546p-D4l9ipzsDSRV4nGY3nrYD4hWYBBlaXA4oYJzO5GBY0iw3zGc8iLAdlqiJwXp3YE6tEaeCgCrohJfT8HfNSp-hIiu2CYGkHiJ3_hjyvsfcYv0w3XlGV1ay8ptw2gIVi6ppawvq_fh98isilKjWYv61AmT8TAD-GDNc07F9JfpOqUMGGxilIC9r5HJ1wHqDRofwWsKGPsrvweStpIZ48LIp7pVc5DATVxwl-QDZzr3Mg62ZWZCwY"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-background-dark text-slate-400 py-12">
+<div class="max-w-7xl mx-auto px-4 text-center">
+<div class="flex items-center justify-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary text-2xl">brand_awareness</span>
+<span class="text-white font-bold text-lg">Singing Path</span>
+</div>
+<p class="text-sm max-w-md mx-auto mb-8">
+                Empowering voices across Finland. Join our community of passionate singers and find your true path.
+            </p>
+<div class="flex justify-center gap-6 mb-8">
+<a class="hover:text-primary transition-colors" href="#">Instagram</a>
+<a class="hover:text-primary transition-colors" href="#">Facebook</a>
+<a class="hover:text-primary transition-colors" href="#">YouTube</a>
+</div>
+<div class="text-xs border-t border-slate-800 pt-8">
+                © 2024 Singing Path. All rights reserved. / Kaikki oikeudet pidätetään.
+            </div>
+</div>
+</footer>
+</body></html>
+
+<!-- Testimonials -->

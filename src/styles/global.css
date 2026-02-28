@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #eb7347;
+  --color-background-light: #f8f6f6;
+  --color-accent-green: #8fa88a;
+  --color-accent-wine: #722f37;
+  --color-neutral-beige: #eaddcf;
+  --color-sage: #94a38e;
+  --color-terracotta: #d97757;
+
+  --font-display: "Manrope", sans-serif;
+
+  --radius-DEFAULT: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+  --radius-full: 9999px;
+}
+
+/* Base styles */
+body {
+  font-family: var(--font-display);
+  background-color: var(--color-background-light);
+  color: theme(colors.slate.900);
+}
+
+/* Scale up text on large desktop screens (mobile/small stays untouched) */
+@media (min-width: 1280px) {
+  html {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1536px) {
+  html {
+    font-size: 21px;
+  }
+}
+@media (min-width: 1920px) {
+  html {
+    font-size: 24px;
+  }
+}
+@media (min-width: 2560px) {
+  html {
+    font-size: 32px;
+  }
+}

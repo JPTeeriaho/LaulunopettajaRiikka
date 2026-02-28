@@ -1,0 +1,44 @@
+{
+  "hero": {
+    "title": "Riikka"
+  },
+  "profile": {
+    "label": "Tietoa minusta",
+    "title": "Laulunopettaja & musiikkipedagogi",
+    "paragraphs": [
+      "Valmistuin musiikkipedagogiksi Oulun ammattikorkeakoulusta vuonna 2014 ja suoritin taiteen maisterin tutkinnon Lapin yliopistossa vuonna 2022. Olen toiminut laulusolistina, pitänyt omia konsertteja ja laulanut korkeatasoisissa kuoroissa. Opettaminen on aina tuntunut työssäni merkityksellisimmältä.",
+      "Taustani on klassisessa laulussa, mutta suhtaudun eri tyylilajeihin avoimesti. Sen sijaan että muokkaisin ääniä tietyn ihanteen mukaisiksi, pyrin auttamaan jokaista laulajaa löytämään tavan käyttää ääntään, joka tuntuu aidolta ja kestävältä. Aiempi työni toimittajana kehitti taitoani ilmaista monimutkaisia prosesseja selkeästi, mikä tukee työtäni opettajana.",
+      "Äänen hyvinvointi ja ilmaisun vapaus ovat opetukseni keskiössä. Kiinnostukseni näihin teemoihin alkoi omien äänellisten haasteideni kautta. Siitä lähtien olen ammentanut sekä tutkimuksesta että käytännön kokemuksesta tukeakseni terveellistä ja vivahteikasta äänenkäyttöä. Monet oppilaat kuvaavat tunteja voimaannuttaviksi ja tukea antaviksi — jopa terapeuttisiksi, vaikka laulutunnit eivät ole terapiaa.",
+      "Opetan yksityisesti osuuskunta Lilithin alaisuudessa. Olen myös ohjannut edistyneitä kuoroja, kuten Oulun hiippakunnan oratoriokuoroa ja Sofia Magdalena -lauluyhtyettä, ja tehnyt yhteistyötä pianistien kuten Markus Vaaran, Laura Heikkilän ja Miikka Lehtoahon kanssa."
+    ]
+  },
+  "approach": [
+    {
+      "icon": "psychology",
+      "title": "Kehollinen ja hermostollinen näkökulma",
+      "paragraphs": [
+        "Laulajan instrumentti on kehon ja mielen kokonaisuus. Erilaiset tilannekohtaiset fyysiset, psyykkiset ja tunnetason tekijät vaikuttavat äänenkäyttöön. Osa esteistä voivat olla pysyvämpiä.",
+        "Yksi opetukseni lähtökohdista on <strong>Alexander-tekniikka</strong>, joka on menetelmä haitallisten kehonkäytön tottumusten tunnistamiseen ja purkamiseen. Alexander-tekniikassa olennaista \"itsensä rauhaan jättäminen\" eli luopuminen turhasta ponnistelusta, suorituskeskeisyydestä ja kontrollista.",
+        "Kehon jännitysten rentoutuessa myös mieli rauhoittuu ja laulutekniikka rakentuu luonnostaan terveemmälle pohjalle. Tie vapaampaan ääneen alkaa yleensä hengityksen vapauttamisesta."
+      ],
+      "linkText": "Alexander-tekniikka ja laulaminen (Opinnäytetyö)",
+      "linkUrl": "https://www.theseus.fi/handle/10024/77119"
+    },
+    {
+      "icon": "neurology",
+      "title": "Polyvagaaliteoria ja traumatietoinen lähestymistapa",
+      "paragraphs": [
+        "Laulunopetukseni lähtökohtiin sisältyvät myös <strong>polyvagaaliteoria</strong> ja sen sovelluksena traumatietoinen lähestymistapa. Tärkeintä on luoda turvallinen olotila, jossa keho ja mieli lepäävät. Tätä kutsutaan ventraalivagaaliseksi autonomisen hermoston tilaksi.",
+        "Laulutunneilla kehitetään mm. kehollista läsnäoloa ja tietoisuutta stressireaktiosta. Kun vireystilan säätely paranee, äänenkäyttöön ilmaantuu helppoutta, vivahteikkuutta ja ilmaisuvoimaa."
+      ],
+      "linkText": "Hermostollinen näkökulma laulamiseen (Maisterintutkielma)",
+      "linkUrl": "https://lauda.ulapland.fi/handle/10024/65291"
+    }
+  ],
+  "cta": {
+    "heading": "Valmis löytämään äänesi?",
+    "text": "Kaikentasoiset ja -ikäiset harrastajat ja ammattilaiset ovat tervetulleita, musiikin tyylilajiin katsomatta.",
+    "primaryButton": { "text": "Varaa tunti", "href": "https://pro.vello.fi/laulustudioriikka-ajanvaraus/" },
+    "secondaryButton": { "text": "Tutustu palveluihin", "href": "/sinulle" }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "hero": {
+    "title": "Sinulle?",
+    "subtitle": "Löydä oma polkusi äänen, ilmaisun ja hyvinvoinnin pariin.",
+    "ctaText": "Tutustu palveluihin",
+    "ctaHref": "#palvelut"
+  },
+  "sectionHeading": "Valitse polkusi",
+  "whyRiikka": {
+    "heading": "Miksi valita polku Riikan kanssa?",
+    "paragraphs": [
+      "Sen sijaan että muokkaisin ääniä tietyn ihanteen mukaisiksi, pyrin auttamaan jokaista laulajaa löytämään tavan käyttää ääntään, joka tuntuu aidolta ja kestävältä. Äänen hyvinvointi ja ilmaisun vapaus ovat opetukseni keskiössä.",
+      "Monet oppilaat kuvaavat tunteja voimaannuttaviksi ja tukea antaviksi — jopa terapeuttisiksi, vaikka laulutunnit eivät ole terapiaa. Kaikentasoiset ja -ikäiset harrastajat ja ammattilaiset ovat tervetulleita, musiikin tyylilajiin katsomatta."
+    ],
+    "ctaText": "Lue lisää tarinastani",
+    "ctaHref": "/riikka"
+  }
+}

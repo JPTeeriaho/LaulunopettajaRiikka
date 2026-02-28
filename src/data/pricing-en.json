@@ -1,0 +1,12 @@
+{
+  "tableTitle": "Pricing",
+  "tableHeaders": { "service": "Service", "duration": "Duration", "price": "Price" },
+  "footnote": "Valid for flexible use at your own pace. Payment via ePassi is available.",
+  "items": [
+    { "name": "Trial lesson for new clients", "price": "€30", "duration": "45 min" },
+    { "name": "Single singing lesson", "price": "€55", "duration": "" },
+    { "name": "Singing lesson package 7 sessions", "price": "€350", "duration": "7 × 45 min" },
+    { "name": "Voice Impro group / season", "price": "€75", "duration": "" },
+    { "name": "Workshops for groups", "price": "Request a quote", "duration": "" }
+  ]
+}

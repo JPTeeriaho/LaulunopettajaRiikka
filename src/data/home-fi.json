@@ -1,0 +1,35 @@
+{
+  "hero": {
+    "title": "Äänesi rinnallakulkija",
+    "subtitle": "Löydä äänesi. Lempeästi.",
+    "ctaText": "Varaa tunti",
+    "ctaHref": "https://pro.vello.fi/laulustudioriikka-ajanvaraus/"
+  },
+  "intro": {
+    "heading": "Tervetuloa laulun pariin",
+    "text": "Olen oululainen laulunopettaja ja musiikkipedagogi yli vuosikymmenen kokemuksella. Opetan Oulun Karjasillalla osuuskunta Lilithin alaisuudessa. Oppilaspaikkoja vapautuu silloin tällöin. Kaikentasoiset ja -ikäiset harrastajat ja ammattilaiset ovat tervetulleita, musiikin tyylilajiin katsomatta.",
+    "note": "Hox! Laulutunneista on apua myös esiintymisjännittäjille ja puhetyöläisille.",
+    "readMoreText": "Lue lisää minusta",
+    "readMoreHref": "/riikka",
+    "quoteText": "Musiikki on sielun kieli."
+  },
+  "testimonialPreview": {
+    "heading": "Mitä oppilaat sanovat?",
+    "cards": [
+      {
+        "quote": "Olen löytänyt laulamisen – ja esiintymisenkin ilon. Kutsun Riikan tunneilla käymistä lauluterapiatapaamisiksi. Tuntien jälkeen olen poikkeuksetta todella energinen ja voimaantunut, kiitos Riikan.",
+        "author": "Jarmo, 57",
+        "role": "Psykoterapeutti",
+        "icon": "psychology"
+      },
+      {
+        "quote": "Kävin laulutunnilla. Edellisestä kerrasta oli sellainen kolme vuotta. Mutta mikä kokemus! Riikka Vuorijärvi laittoi mut hengittämään ihan kunnolla ja kun avasin suuni, niin johan alkoi tapahtua. Suosittelen sydämeni pohjasta asti Riikan laulutuntia. Menkää ihmiset, menkää.",
+        "author": "Nainen 36",
+        "role": "Musiikkipedagogi",
+        "icon": "school"
+      }
+    ],
+    "readMoreText": "Lue lisää palautteita",
+    "readMoreHref": "/palautteet"
+  }
+}

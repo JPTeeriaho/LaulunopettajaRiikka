@@ -1,0 +1,34 @@
+{
+  "hero": {
+    "title": "Pricing & Contact",
+    "subtitle": "",
+    "ctaText": "See pricing",
+    "ctaHref": "#pricing"
+  },
+  "booking": {
+    "heading": "Book your lesson",
+    "text": "Bookings are handled easily through the Vello system. Lessons can be cancelled up to 24 hours in advance via the booking confirmation email. In cases of force majeure, please contact Riikka directly.",
+    "buttonText": "Go to Vello booking",
+    "buttonHref": "https://pro.vello.fi/laulustudioriikka-ajanvaraus/"
+  },
+  "location": {
+    "heading": "Teaching location",
+    "name": "Tässä Hetkessä ry – Group Space \"Vintti\"",
+    "street": "Ketokatu 8",
+    "city": "90140 Oulu, Karjasilta",
+    "note": "Entrance at the end of the long building, upstairs"
+  },
+  "contact": {
+    "heading": "Get in touch",
+    "phoneLabel": "Phone",
+    "phone": "040-8448440",
+    "phoneFull": "+358408448440",
+    "emailLabel": "Email",
+    "email": "vuorijarviriikka@gmail.com",
+    "billingLabel": "Billing information",
+    "billingCompany": "Lilith Cooperative",
+    "billingPhone": "045 690 7191",
+    "billingPhoneFull": "+358456907191",
+    "billingEmail": "lilith@lilith.fi"
+  }
+}

@@ -1,0 +1,140 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Nav from "../../components/Nav.astro";
+import Hero from "../../components/Hero.astro";
+import TestimonialCard from "../../components/TestimonialCard.astro";
+import Footer from "../../components/Footer.astro";
+import { getCollection } from "astro:content";
+import pageData from "../../data/palautteet-en.json";
+
+import heroImg from "../../assets/images/kolme-laulavaa-naista.jpg";
+import sauliImg from "../../assets/images/sauli.jpeg";
+import kukkaImg from "../../assets/images/kukkakimara.jpeg";
+
+const longTestimonials = (await getCollection("testimonials", ({ data }) => data.lang === "en" && data.type === "long"))
+  .sort((a, b) => a.data.order - b.data.order);
+
+const improTestimonials = (await getCollection("testimonials", ({ data }) => data.lang === "en" && data.type === "impro"))
+  .sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout title="Testimonials — Riikka Vuorijärvi">
+  <Nav currentPage="palautteet" lang="en" />
+
+  <!-- Hero -->
+  <Hero
+    title={pageData.hero.title}
+    subtitle={pageData.hero.subtitle}
+    ctaText={pageData.hero.ctaText}
+    ctaHref={pageData.hero.ctaHref}
+    height="h-[60vh]"
+    backgroundImage={heroImg.src}
+  />
+
+  <!-- Video links -->
+  <section class="max-w-4xl mx-auto px-6 pt-16">
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      {
+        pageData.videoLinks.map((link) => (
+          <a
+            href={link.url}
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center gap-2 bg-accent-wine/10 text-accent-wine px-5 py-3 rounded-lg font-medium hover:bg-accent-wine/20 transition-colors no-underline"
+          >
+            <span class="material-symbols-outlined">play_circle</span>
+            {link.text}
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- Long-form testimonials -->
+  <section class="max-w-4xl mx-auto px-6 py-20" id="experiences">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-extrabold text-slate-900 mb-4">
+        {pageData.longSectionTitle}
+      </h2>
+      <div class="h-1.5 w-24 bg-terracotta mx-auto rounded-full"></div>
+    </div>
+
+    <!-- Decorative images -->
+    <div class="flex justify-center gap-6 mb-16">
+      <div class="w-32 h-32 rounded-full overflow-hidden shadow-lg hidden md:block">
+        <img src={sauliImg.src} alt="Sauli" class="w-full h-full object-cover" />
+      </div>
+      <div class="w-32 h-32 rounded-full overflow-hidden shadow-lg hidden md:block">
+        <img
+          src={kukkaImg.src}
+          alt="Bouquet of flowers"
+          class="w-full h-full object-cover"
+        />
+      </div>
+    </div>
+
+    <div class="space-y-12">
+      {
+        longTestimonials.map((t) => (
+          <TestimonialCard
+            quote={t.body}
+            author={t.data.author}
+            variant="full"
+          />
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- Voice impro testimonials -->
+  <section class="bg-sage/5 py-24">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-8">
+        <h2 class="text-4xl font-extrabold text-slate-900 mb-4">
+          {pageData.improSectionTitle}
+        </h2>
+        <div class="h-1.5 w-24 bg-sage mx-auto rounded-full"></div>
+      </div>
+      <p
+        class="text-center text-slate-600 max-w-2xl mx-auto mb-16 text-lg leading-relaxed"
+      >
+        {pageData.improIntro}
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {
+          improTestimonials.map((t) => (
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-sage/10">
+              <p class="italic text-slate-700 mb-6">
+                &ldquo;{t.body}&rdquo;
+              </p>
+              <p class="font-bold text-sage">{t.data.author}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-primary/5 py-16 px-6 lg:px-40 text-center">
+    <div class="max-w-2xl mx-auto flex flex-col gap-6">
+      <h2 class="text-2xl font-bold text-slate-900">
+        {pageData.cta.heading}
+      </h2>
+      <p class="text-slate-600">
+        {pageData.cta.text}
+      </p>
+      <div class="flex justify-center gap-4 pt-2">
+        <a
+          href={pageData.cta.buttonHref}
+          class="flex min-w-[180px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-primary text-white text-base font-bold shadow-md hover:bg-primary/90 transition-colors no-underline"
+        >
+          {pageData.cta.buttonText}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer lang="en" />
+</BaseLayout>

@@ -1,0 +1,12 @@
+# Cloudflare Pages redirects
+# Format: from  to  status
+
+# FI aliases (if someone types these)
+/palvelut  /sinulle  301
+/yhteystiedot  /hinnat  301
+/tietoa  /riikka  301
+
+# EN aliases
+/en/services  /en/for-you  301
+/en/contact  /en/pricing  301
+/en/about  /en/riikka  301

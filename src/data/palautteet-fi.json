@@ -1,0 +1,27 @@
+{
+  "hero": {
+    "title": "Palautteita",
+    "subtitle": "Kokemuksia ja tarinoita yhteisistä hetkistä laulun, äänenkäytön ja musiikin parissa.",
+    "ctaText": "Lue tarinat",
+    "ctaHref": "#kokemuksia"
+  },
+  "videoLinks": [
+    {
+      "text": "Sauli kertoo, miten lauluinto syttyi liekkeihin",
+      "url": "https://www.youtube.com/watch?v=YlIV7-teGT0"
+    },
+    {
+      "text": "Sirkku Löppösen taidonnäyte vuoden opintojen jälkeen",
+      "url": "https://www.youtube.com/watch?v=dX3JJ29pf4U"
+    }
+  ],
+  "longSectionTitle": "Asiakkaiden kokemuksia",
+  "improSectionTitle": "Ääni-improvisaation palautteet",
+  "improIntro": "Ääni-impro on matalan kynnyksen porukka, jossa laajennetaan omaa mukavuusaluetta hauskanpito edellä. Laulutaito ei ole välttämätön, eikä musiikkityylien hallintaa tarvita.",
+  "cta": {
+    "heading": "Haluatko jakaa oman kokemuksesi?",
+    "text": "Arvostan jokaista palautetta. Se auttaa minua kehittymään ja tarjoamaan entistä parempia musiikkihetkiä.",
+    "buttonText": "Lähetä palautetta",
+    "buttonHref": "/hinnat#yhteystiedot"
+  }
+}

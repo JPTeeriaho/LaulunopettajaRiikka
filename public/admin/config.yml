@@ -1,0 +1,572 @@
+backend:
+  name: github
+  repo: Teeriaho/LaulunopettajaRiikka
+  branch: main
+  # OAuth: tarvitaan erillinen OAuth-proxy Cloudflare Workeriin
+  # (konfiguroidaan deployn jälkeen — sivu toimii ilman CMS:ää jo nyt)
+
+# Mediatiedostot
+media_folder: "src/assets/images"
+public_folder: "/src/assets/images"
+
+# Lokalisointi
+locale: "fi"
+
+# Sisältökokoelmat
+collections:
+  # ──────────────────────────────────────────
+  # BLOGI / BLOG
+  # ──────────────────────────────────────────
+  - name: "blog"
+    label: "Blogipostaukset"
+    label_singular: "Blogipostaus"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{lang}}-{{slug}}"
+    extension: "md"
+    fields:
+      - { label: "Otsikko", name: "title", widget: "string" }
+      - { label: "Kategoria", name: "category", widget: "string" }
+      - { label: "Päivämäärä", name: "date", widget: "string", hint: "Muoto: 2023-10-15" }
+      - { label: "Tiivistelmä", name: "excerpt", widget: "text" }
+      - { label: "Kuva-URL", name: "image", widget: "string" }
+      - { label: "Kieli", name: "lang", widget: "select", options: ["fi", "en"], default: "fi" }
+      - { label: "Järjestys", name: "order", widget: "number", required: false }
+      - { label: "Sisältö", name: "body", widget: "markdown" }
+
+  # ──────────────────────────────────────────
+  # PALAUTTEET / TESTIMONIALS
+  # ──────────────────────────────────────────
+  - name: "testimonials"
+    label: "Palautteet"
+    label_singular: "Palaute"
+    folder: "src/content/testimonials"
+    create: true
+    slug: "{{lang}}-{{slug}}"
+    extension: "md"
+    fields:
+      - { label: "Kirjoittaja", name: "author", widget: "string" }
+      - { label: "Rooli", name: "role", widget: "string", required: false }
+      - { label: "Kieli", name: "lang", widget: "select", options: ["fi", "en"], default: "fi" }
+      - { label: "Tyyppi", name: "type", widget: "select", options: ["long", "impro"], default: "long" }
+      - { label: "Järjestys", name: "order", widget: "number" }
+      - { label: "Lainaus (sitaatti)", name: "body", widget: "text" }
+
+  # ──────────────────────────────────────────
+  # PALVELUT / SERVICES  (Sinulle / For You)
+  # ──────────────────────────────────────────
+  - name: "services"
+    label: "Palvelut (Sinulle)"
+    label_singular: "Palvelu"
+    folder: "src/content/services"
+    create: true
+    slug: "{{lang}}-{{fields.order}}-{{slug}}"
+    extension: "md"
+    fields:
+      - { label: "Otsikko", name: "title", widget: "string" }
+      - { label: "Kuvatiedosto", name: "image", widget: "string", hint: "Tiedostonimi, esim. eila-estradilla.jpg" }
+      - { label: "Kieli", name: "lang", widget: "select", options: ["fi", "en"], default: "fi" }
+      - { label: "Järjestys", name: "order", widget: "number" }
+      - { label: "Kuvaus", name: "body", widget: "text" }
+
+  # ──────────────────────────────────────────
+  # HINNASTO / PRICING
+  # ──────────────────────────────────────────
+  - name: "pricing"
+    label: "Hinnasto"
+    files:
+      - name: "pricing-fi"
+        label: "Hinnasto (FI)"
+        file: "src/data/pricing-fi.json"
+        fields:
+          - { label: "Osion otsikko", name: "tableTitle", widget: "string" }
+          - label: "Taulukon otsikot"
+            name: "tableHeaders"
+            widget: "object"
+            fields:
+              - { label: "Palvelu", name: "service", widget: "string" }
+              - { label: "Kesto", name: "duration", widget: "string" }
+              - { label: "Hinta", name: "price", widget: "string" }
+          - { label: "Alaviite", name: "footnote", widget: "string" }
+          - label: "Hinnaston rivit"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Palvelu", name: "name", widget: "string" }
+              - { label: "Hinta", name: "price", widget: "string" }
+              - { label: "Kesto", name: "duration", widget: "string", required: false }
+      - name: "pricing-en"
+        label: "Pricing (EN)"
+        file: "src/data/pricing-en.json"
+        fields:
+          - { label: "Section title", name: "tableTitle", widget: "string" }
+          - label: "Table headers"
+            name: "tableHeaders"
+            widget: "object"
+            fields:
+              - { label: "Service", name: "service", widget: "string" }
+              - { label: "Duration", name: "duration", widget: "string" }
+              - { label: "Price", name: "price", widget: "string" }
+          - { label: "Footnote", name: "footnote", widget: "string" }
+          - label: "Pricing rows"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Service", name: "name", widget: "string" }
+              - { label: "Price", name: "price", widget: "string" }
+              - { label: "Duration", name: "duration", widget: "string", required: false }
+
+  # ──────────────────────────────────────────
+  # ETUSIVU / HOME
+  # ──────────────────────────────────────────
+  - name: "home"
+    label: "Etusivu"
+    files:
+      - name: "home-fi"
+        label: "Etusivu (FI)"
+        file: "src/data/home-fi.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Otsikko", name: "title", widget: "string" }
+              - { label: "Alaotsikko", name: "subtitle", widget: "string" }
+              - { label: "CTA-teksti", name: "ctaText", widget: "string" }
+              - { label: "CTA-linkki", name: "ctaHref", widget: "string" }
+          - label: "Esittely"
+            name: "intro"
+            widget: "object"
+            fields:
+              - { label: "Otsikko", name: "heading", widget: "string" }
+              - { label: "Teksti", name: "text", widget: "text" }
+              - { label: "Huomautus", name: "note", widget: "string" }
+              - { label: "Lue lisää -teksti", name: "readMoreText", widget: "string" }
+              - { label: "Lue lisää -linkki", name: "readMoreHref", widget: "string" }
+              - { label: "Lainaus", name: "quoteText", widget: "string" }
+          - label: "Palaute-esikatselu"
+            name: "testimonialPreview"
+            widget: "object"
+            fields:
+              - { label: "Otsikko", name: "heading", widget: "string" }
+              - label: "Kortit"
+                name: "cards"
+                widget: "list"
+                fields:
+                  - { label: "Sitaatti", name: "quote", widget: "text" }
+                  - { label: "Kirjoittaja", name: "author", widget: "string" }
+                  - { label: "Rooli", name: "role", widget: "string" }
+                  - { label: "Ikoni", name: "icon", widget: "string" }
+              - { label: "Lue lisää -teksti", name: "readMoreText", widget: "string" }
+              - { label: "Lue lisää -linkki", name: "readMoreHref", widget: "string" }
+      - name: "home-en"
+        label: "Home (EN)"
+        file: "src/data/home-en.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+              - { label: "CTA text", name: "ctaText", widget: "string" }
+              - { label: "CTA link", name: "ctaHref", widget: "string" }
+          - label: "Intro"
+            name: "intro"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Note", name: "note", widget: "string" }
+              - { label: "Read more text", name: "readMoreText", widget: "string" }
+              - { label: "Read more link", name: "readMoreHref", widget: "string" }
+              - { label: "Quote", name: "quoteText", widget: "string" }
+          - label: "Testimonial preview"
+            name: "testimonialPreview"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - label: "Cards"
+                name: "cards"
+                widget: "list"
+                fields:
+                  - { label: "Quote", name: "quote", widget: "text" }
+                  - { label: "Author", name: "author", widget: "string" }
+                  - { label: "Role", name: "role", widget: "string" }
+                  - { label: "Icon", name: "icon", widget: "string" }
+              - { label: "Read more text", name: "readMoreText", widget: "string" }
+              - { label: "Read more link", name: "readMoreHref", widget: "string" }
+
+  # ──────────────────────────────────────────
+  # RIIKKA-SIVU / RIIKKA PAGE
+  # ──────────────────────────────────────────
+  - name: "riikka"
+    label: "Riikka-sivu"
+    files:
+      - name: "riikka-fi"
+        label: "Riikka (FI)"
+        file: "src/data/riikka-fi.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Otsikko", name: "title", widget: "string" }
+          - label: "Profiili"
+            name: "profile"
+            widget: "object"
+            fields:
+              - { label: "Yläotsikko", name: "label", widget: "string" }
+              - { label: "Otsikko", name: "title", widget: "string" }
+              - label: "Kappaleet"
+                name: "paragraphs"
+                widget: "list"
+                field: { label: "Kappale", name: "paragraph", widget: "text" }
+          - label: "Lähestymistapa"
+            name: "approach"
+            widget: "list"
+            fields:
+              - { label: "Ikoni", name: "icon", widget: "string" }
+              - { label: "Otsikko", name: "title", widget: "string" }
+              - label: "Kappaleet"
+                name: "paragraphs"
+                widget: "list"
+                field: { label: "Kappale", name: "paragraph", widget: "text" }
+              - { label: "Linkin teksti", name: "linkText", widget: "string" }
+              - { label: "Linkin URL", name: "linkUrl", widget: "string" }
+          - label: "CTA"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Otsikko", name: "heading", widget: "string" }
+              - { label: "Teksti", name: "text", widget: "string" }
+              - label: "Päänappi"
+                name: "primaryButton"
+                widget: "object"
+                fields:
+                  - { label: "Teksti", name: "text", widget: "string" }
+                  - { label: "Linkki", name: "href", widget: "string" }
+              - label: "Toissijainen nappi"
+                name: "secondaryButton"
+                widget: "object"
+                fields:
+                  - { label: "Teksti", name: "text", widget: "string" }
+                  - { label: "Linkki", name: "href", widget: "string" }
+      - name: "riikka-en"
+        label: "Riikka (EN)"
+        file: "src/data/riikka-en.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+          - label: "Profile"
+            name: "profile"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Paragraphs"
+                name: "paragraphs"
+                widget: "list"
+                field: { label: "Paragraph", name: "paragraph", widget: "text" }
+          - label: "Approach"
+            name: "approach"
+            widget: "list"
+            fields:
+              - { label: "Icon", name: "icon", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Paragraphs"
+                name: "paragraphs"
+                widget: "list"
+                field: { label: "Paragraph", name: "paragraph", widget: "text" }
+              - { label: "Link text", name: "linkText", widget: "string" }
+              - { label: "Link URL", name: "linkUrl", widget: "string" }
+          - label: "CTA"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Text", name: "text", widget: "string" }
+              - label: "Primary button"
+                name: "primaryButton"
+                widget: "object"
+                fields:
+                  - { label: "Text", name: "text", widget: "string" }
+                  - { label: "Link", name: "href", widget: "string" }
+              - label: "Secondary button"
+                name: "secondaryButton"
+                widget: "object"
+                fields:
+                  - { label: "Text", name: "text", widget: "string" }
+                  - { label: "Link", name: "href", widget: "string" }
+
+  # ──────────────────────────────────────────
+  # SINULLE / FOR YOU
+  # ──────────────────────────────────────────
+  - name: "sinulle"
+    label: "Sinulle-sivu"
+    files:
+      - name: "sinulle-fi"
+        label: "Sinulle (FI)"
+        file: "src/data/sinulle-fi.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Otsikko", name: "title", widget: "string" }
+              - { label: "Alaotsikko", name: "subtitle", widget: "string" }
+              - { label: "CTA-teksti", name: "ctaText", widget: "string" }
+              - { label: "CTA-linkki", name: "ctaHref", widget: "string" }
+          - { label: "Osion otsikko", name: "sectionHeading", widget: "string" }
+          - label: "Miksi Riikka?"
+            name: "whyRiikka"
+            widget: "object"
+            fields:
+              - { label: "Otsikko", name: "heading", widget: "string" }
+              - label: "Kappaleet"
+                name: "paragraphs"
+                widget: "list"
+                field: { label: "Kappale", name: "paragraph", widget: "text" }
+              - { label: "CTA-teksti", name: "ctaText", widget: "string" }
+              - { label: "CTA-linkki", name: "ctaHref", widget: "string" }
+      - name: "sinulle-en"
+        label: "For You (EN)"
+        file: "src/data/sinulle-en.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+              - { label: "CTA text", name: "ctaText", widget: "string" }
+              - { label: "CTA link", name: "ctaHref", widget: "string" }
+          - { label: "Section heading", name: "sectionHeading", widget: "string" }
+          - label: "Why Riikka?"
+            name: "whyRiikka"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - label: "Paragraphs"
+                name: "paragraphs"
+                widget: "list"
+                field: { label: "Paragraph", name: "paragraph", widget: "text" }
+              - { label: "CTA text", name: "ctaText", widget: "string" }
+              - { label: "CTA link", name: "ctaHref", widget: "string" }
+
+  # ──────────────────────────────────────────
+  # PALAUTTEET-SIVU / TESTIMONIALS PAGE
+  # ──────────────────────────────────────────
+  - name: "palautteet-page"
+    label: "Palautteet-sivu"
+    files:
+      - name: "palautteet-fi"
+        label: "Palautesivu (FI)"
+        file: "src/data/palautteet-fi.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Otsikko", name: "title", widget: "string" }
+              - { label: "Alaotsikko", name: "subtitle", widget: "text" }
+              - { label: "CTA-teksti", name: "ctaText", widget: "string" }
+              - { label: "CTA-linkki", name: "ctaHref", widget: "string" }
+          - label: "Videolinkit"
+            name: "videoLinks"
+            widget: "list"
+            fields:
+              - { label: "Teksti", name: "text", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
+          - { label: "Pitkien palautteiden otsikko", name: "longSectionTitle", widget: "string" }
+          - { label: "Impro-palautteiden otsikko", name: "improSectionTitle", widget: "string" }
+          - { label: "Impro-esittely", name: "improIntro", widget: "text" }
+          - label: "CTA"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Otsikko", name: "heading", widget: "string" }
+              - { label: "Teksti", name: "text", widget: "text" }
+              - { label: "Nappi-teksti", name: "buttonText", widget: "string" }
+              - { label: "Nappi-linkki", name: "buttonHref", widget: "string" }
+      - name: "palautteet-en"
+        label: "Testimonials page (EN)"
+        file: "src/data/palautteet-en.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "text" }
+              - { label: "CTA text", name: "ctaText", widget: "string" }
+              - { label: "CTA link", name: "ctaHref", widget: "string" }
+          - label: "Video links"
+            name: "videoLinks"
+            widget: "list"
+            fields:
+              - { label: "Text", name: "text", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
+          - { label: "Long section title", name: "longSectionTitle", widget: "string" }
+          - { label: "Impro section title", name: "improSectionTitle", widget: "string" }
+          - { label: "Impro intro", name: "improIntro", widget: "text" }
+          - label: "CTA"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Button text", name: "buttonText", widget: "string" }
+              - { label: "Button link", name: "buttonHref", widget: "string" }
+
+  # ──────────────────────────────────────────
+  # HINNAT-SIVU / PRICING PAGE
+  # ──────────────────────────────────────────
+  - name: "hinnat-page"
+    label: "Hinnat-sivu"
+    files:
+      - name: "hinnat-fi"
+        label: "Hinnat-sivu (FI)"
+        file: "src/data/hinnat-fi.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Otsikko", name: "title", widget: "string" }
+              - { label: "Alaotsikko", name: "subtitle", widget: "string" }
+              - { label: "CTA-teksti", name: "ctaText", widget: "string" }
+              - { label: "CTA-linkki", name: "ctaHref", widget: "string" }
+          - label: "Varaus"
+            name: "booking"
+            widget: "object"
+            fields:
+              - { label: "Otsikko", name: "heading", widget: "string" }
+              - { label: "Teksti", name: "text", widget: "text" }
+              - { label: "Nappi-teksti", name: "buttonText", widget: "string" }
+              - { label: "Nappi-linkki", name: "buttonHref", widget: "string" }
+          - label: "Sijainti"
+            name: "location"
+            widget: "object"
+            fields:
+              - { label: "Otsikko", name: "heading", widget: "string" }
+              - { label: "Nimi", name: "name", widget: "string" }
+              - { label: "Katu", name: "street", widget: "string" }
+              - { label: "Kaupunki", name: "city", widget: "string" }
+              - { label: "Huomautus", name: "note", widget: "string" }
+          - label: "Yhteystiedot"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Otsikko", name: "heading", widget: "string" }
+              - { label: "Puhelin-label", name: "phoneLabel", widget: "string" }
+              - { label: "Puhelin", name: "phone", widget: "string" }
+              - { label: "Puhelin (kansainväl.)", name: "phoneFull", widget: "string" }
+              - { label: "Sähköposti-label", name: "emailLabel", widget: "string" }
+              - { label: "Sähköposti", name: "email", widget: "string" }
+              - { label: "Laskutus-label", name: "billingLabel", widget: "string" }
+              - { label: "Laskutusyritys", name: "billingCompany", widget: "string" }
+              - { label: "Laskutus-puhelin", name: "billingPhone", widget: "string" }
+              - { label: "Laskutus-puhelin (kansainväl.)", name: "billingPhoneFull", widget: "string" }
+              - { label: "Laskutus-sähköposti", name: "billingEmail", widget: "string" }
+      - name: "hinnat-en"
+        label: "Pricing page (EN)"
+        file: "src/data/hinnat-en.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+              - { label: "CTA text", name: "ctaText", widget: "string" }
+              - { label: "CTA link", name: "ctaHref", widget: "string" }
+          - label: "Booking"
+            name: "booking"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Button text", name: "buttonText", widget: "string" }
+              - { label: "Button link", name: "buttonHref", widget: "string" }
+          - label: "Location"
+            name: "location"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Street", name: "street", widget: "string" }
+              - { label: "City", name: "city", widget: "string" }
+              - { label: "Note", name: "note", widget: "string" }
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Phone label", name: "phoneLabel", widget: "string" }
+              - { label: "Phone", name: "phone", widget: "string" }
+              - { label: "Phone (intl)", name: "phoneFull", widget: "string" }
+              - { label: "Email label", name: "emailLabel", widget: "string" }
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "Billing label", name: "billingLabel", widget: "string" }
+              - { label: "Billing company", name: "billingCompany", widget: "string" }
+              - { label: "Billing phone", name: "billingPhone", widget: "string" }
+              - { label: "Billing phone (intl)", name: "billingPhoneFull", widget: "string" }
+              - { label: "Billing email", name: "billingEmail", widget: "string" }
+
+  # ──────────────────────────────────────────
+  # BLOGI-SIVU / BLOG PAGE
+  # ──────────────────────────────────────────
+  - name: "blog-page"
+    label: "Blogisivu"
+    files:
+      - name: "blogi-fi"
+        label: "Blogisivu (FI)"
+        file: "src/data/blogi-fi.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Otsikko", name: "title", widget: "string" }
+              - { label: "Alaotsikko", name: "subtitle", widget: "text" }
+              - { label: "Taustakuva-URL", name: "backgroundImage", widget: "string" }
+          - { label: "Lue lisää -teksti", name: "readMoreText", widget: "string" }
+      - name: "blogi-en"
+        label: "Blog page (EN)"
+        file: "src/data/blogi-en.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "text" }
+              - { label: "Background image URL", name: "backgroundImage", widget: "string" }
+          - { label: "Read more text", name: "readMoreText", widget: "string" }
+
+  # ──────────────────────────────────────────
+  # SIVUSTON ASETUKSET / SITE SETTINGS
+  # ──────────────────────────────────────────
+  - name: "settings"
+    label: "Asetukset"
+    files:
+      - name: "site"
+        label: "Sivuston asetukset"
+        file: "src/data/site.json"
+        fields:
+          - { label: "Vello-varaus-URL", name: "velloBookingUrl", widget: "string" }
+          - label: "Sosiaalinen media"
+            name: "social"
+            widget: "object"
+            fields:
+              - { label: "Facebook", name: "facebook", widget: "string" }
+              - { label: "YouTube", name: "youtube", widget: "string" }
+      - name: "maps"
+        label: "Kartta-upotus"
+        file: "src/data/maps-embed.json"
+        fields:
+          - { label: "Google Maps embed URL", name: "src", widget: "string" }

@@ -1,0 +1,18 @@
+{
+  "hero": {
+    "title": "For You?",
+    "subtitle": "Find your own path to voice, expression and wellbeing.",
+    "ctaText": "Explore services",
+    "ctaHref": "#services"
+  },
+  "sectionHeading": "Choose your path",
+  "whyRiikka": {
+    "heading": "Why choose Riikka?",
+    "paragraphs": [
+      "Rather than shaping voices according to fixed ideals, I aim to help each singer find a way of using their voice that feels authentic and sustainable. Questions of vocal wellbeing and expressive freedom are central to my teaching.",
+      "Many students describe the lessons as strengthening and supportive — sometimes even therapeutic, although they are not therapy. Hobbyists and professionals of all levels and ages are welcome, regardless of musical genre."
+    ],
+    "ctaText": "Read more about me",
+    "ctaHref": "/en/riikka"
+  }
+}

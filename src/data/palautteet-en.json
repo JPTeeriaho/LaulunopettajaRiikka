@@ -1,0 +1,27 @@
+{
+  "hero": {
+    "title": "Testimonials",
+    "subtitle": "Experiences and stories from shared moments in singing, voice work and music.",
+    "ctaText": "Read the stories",
+    "ctaHref": "#experiences"
+  },
+  "videoLinks": [
+    {
+      "text": "Sauli tells how his passion for singing was ignited",
+      "url": "https://www.youtube.com/watch?v=YlIV7-teGT0"
+    },
+    {
+      "text": "Sirkku Löppönen's showcase performance after one year of study",
+      "url": "https://www.youtube.com/watch?v=dX3JJ29pf4U"
+    }
+  ],
+  "longSectionTitle": "Student experiences",
+  "improSectionTitle": "Voice Impro feedback",
+  "improIntro": "Voice Impro is a low-threshold, joy-driven group where you can gently stretch beyond your comfort zone. No singing skills required. No mastery of musical styles needed.",
+  "cta": {
+    "heading": "Would you like to share your experience?",
+    "text": "I value every piece of feedback. It helps me grow and offer even better musical moments.",
+    "buttonText": "Send feedback",
+    "buttonHref": "/en/pricing#contact"
+  }
+}

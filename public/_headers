@@ -1,0 +1,18 @@
+# Security headers
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# Cache immutable hashed assets (Astro _astro/ output)
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Images — long cache
+/images/*
+  Cache-Control: public, max-age=604800
+
+# Admin page — no cache
+/admin/*
+  Cache-Control: no-cache

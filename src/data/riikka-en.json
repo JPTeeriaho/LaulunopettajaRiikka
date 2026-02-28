@@ -1,0 +1,44 @@
+{
+  "hero": {
+    "title": "Riikka"
+  },
+  "profile": {
+    "label": "About me",
+    "title": "Voice Teacher & Music Pedagogue",
+    "paragraphs": [
+      "I graduated as a music pedagogue from Oulu University of Applied Sciences in 2014 and completed a Master of Arts degree at the University of Lapland in 2022. I have worked as a vocal soloist, given my own concerts, and sung in high-level choirs. Teaching has always felt like the most meaningful part of my work.",
+      "My background is in classical singing, but I approach different styles with openness. Rather than shaping voices according to fixed ideals, I aim to help each singer find a way of using their voice that feels authentic and sustainable. My earlier work as a journalist developed my ability to express complex processes clearly, which supports my work as a teacher.",
+      "Questions of vocal wellbeing and expressive freedom are central to my teaching. My interest in these themes began through working with my own vocal challenges. Since then, I have drawn on both research and practical experience to support healthy, nuanced voice use. Many students describe the lessons as strengthening and supportive — sometimes even therapeutic, although they are not therapy.",
+      "I teach privately and currently work under the cooperative Lilith. I have also coached advanced choirs, including the Oulu Diocese Oratorio Choir and the vocal ensemble Sofia Magdalena, and collaborated with pianists such as Markus Vaara, Laura Heikkilä and Miikka Lehtoaho."
+    ]
+  },
+  "approach": [
+    {
+      "icon": "psychology",
+      "title": "Embodied and nervous-system oriented approach",
+      "paragraphs": [
+        "The singer's instrument is the whole body–mind system. Various situational factors can interfere with vocal freedom. Some influences are more long-term in nature, such as unhelpful habits, limiting beliefs, or emotional tension.",
+        "One of the foundations of my teaching is the <strong>Alexander Technique</strong> — a method for recognizing and reducing unconstructive patterns of use. In Alexander terminology, this is sometimes described as \"letting yourself be,\" meaning a willingness to release unnecessary effort, excessive goal-orientation, and the need to control.",
+        "When the body lets go of excess tension, a more balanced and sustainable vocal technique can emerge naturally. The process of freeing the voice often begins with the breath."
+      ],
+      "linkText": "Alexander Technique and Singing (Thesis)",
+      "linkUrl": "https://www.theseus.fi/handle/10024/77119"
+    },
+    {
+      "icon": "neurology",
+      "title": "Polyvagal Theory and trauma-sensitive approach",
+      "paragraphs": [
+        "In my vocal pedagogy I draw from the <strong>Polyvagal Theory</strong> and trauma-sensitive approach with its applications. What matters most is creating a space in which both body and mind can feel safe and at ease — a state often referred to as the ventral vagal state within the autonomic nervous system.",
+        "In singing lessons, we work on strengthening the connection between body and mind and on developing awareness of the stress response. When the nervous system is well regulated, healthy vocal technique can emerge more naturally. Singing becomes easier, more enjoyable, and more genuinely expressive."
+      ],
+      "linkText": "Nervous System Perspective on Singing (Master's Thesis)",
+      "linkUrl": "https://lauda.ulapland.fi/handle/10024/65291"
+    }
+  ],
+  "cta": {
+    "heading": "Ready to find your voice?",
+    "text": "Hobbyists and professionals of all levels and ages are welcome, regardless of musical genre.",
+    "primaryButton": { "text": "Book a lesson", "href": "https://pro.vello.fi/laulustudioriikka-ajanvaraus/" },
+    "secondaryButton": { "text": "Explore services", "href": "/en/for-you" }
+  }
+}

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#a9bb9b",
+                        "background-light": "#f7f7f7",
+                        "background-dark": "#191b17",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Student Stories | Wellness Academy</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 transition-colors duration-300">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<header class="flex items-center justify-between border-b border-primary/20 bg-background-light dark:bg-background-dark px-6 md:px-20 py-4 sticky top-0 z-50">
+<div class="flex items-center gap-3">
+<div class="text-primary size-8">
+<span class="material-symbols-outlined text-4xl">eco</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold tracking-tight">Wellness Academy</h2>
+</div>
+<nav class="hidden md:flex flex-1 justify-center gap-10">
+<a class="text-slate-700 dark:text-slate-300 text-sm font-semibold hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-slate-700 dark:text-slate-300 text-sm font-semibold hover:text-primary transition-colors" href="#">Courses</a>
+<a class="text-primary text-sm font-semibold" href="#">Testimonials</a>
+<a class="text-slate-700 dark:text-slate-300 text-sm font-semibold hover:text-primary transition-colors" href="#">About</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="flex min-w-[100px] items-center justify-center rounded-lg h-10 px-5 bg-primary text-slate-900 text-sm font-bold tracking-wide hover:bg-primary/90 transition-all">
+                    Sign Up
+                </button>
+</div>
+</header>
+<main class="flex-1">
+<section class="relative w-full h-[60vh] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center z-0" data-alt="Serene person practicing mindfulness in nature" style='background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCDrDeaURMmT7HX7cYu8pDYeLmCpg2Zky272jFmjBsEsktP0-CouaAYI2xeMXfpiRyYwFIZrm2hmRbCbGT21VGMAJOc4ONjel97JEuf07XctydLh-Z5FCTUCqKDAgP6jFdpo6bK1Ab_tDgt1eCzqUk0CHlu6kLAAQdmLRVf25jlJt0tEyB03DWA7VuGYPpHsr540BV83FIabaZlmIqNvwtUg5G5SAdD4RuEFKbi813JJzabk4tmwzrekwmrT2snKVm_OGkHf-yaw1sb");'></div>
+<div class="relative z-10 text-center px-4 max-w-4xl">
+<h1 class="text-white text-4xl md:text-6xl font-black leading-tight tracking-tight mb-4">
+                        Student Stories / Oppilaiden tarinoita
+                    </h1>
+<p class="text-white/90 text-lg md:text-xl font-medium max-w-2xl mx-auto mb-8">
+                        Experience the journey of growth and harmony through the voices of our community.
+                    </p>
+<button class="bg-primary text-slate-900 h-12 px-8 rounded-lg font-bold text-lg hover:scale-105 transition-transform">
+                        Read Stories
+                    </button>
+</div>
+</section>
+<section class="max-w-[1200px] mx-auto px-6 py-16 md:py-24">
+<div class="flex flex-col lg:flex-row gap-12">
+<div class="hidden lg:flex flex-col gap-8 w-1/4">
+<div class="sticky top-28 space-y-8">
+<div class="rounded-2xl overflow-hidden shadow-xl aspect-[3/4] bg-primary/10">
+<img alt="Student smiling" class="w-full h-full object-cover" data-alt="Happy student smiling after singing class" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2yGR1iITWfNkSKLMQix2MD-z0t4uiAh1Ddc1LbvjvsFJSVvxbSPkvFwga-fIgjSVhG31C1mMG844qwj96eSc3fEqJXMJml5_fL76SdQ76trY1KNB_6YcNLNizVqu_x6lffdgSD1js0kem2DhQXkk69w4gyWab1ANLVQmQPlMwvfHQt4wJU3x9BwcljLsMM9C8vEC3VAdZ_RJiKjYvavcAciQHlmWIdf4FbRjipwOdFv8MWUcw4tatiTVHSR71Mtxw8lQOUSb3PS-s"/>
+</div>
+<div class="p-6 bg-primary/5 rounded-2xl border border-primary/10">
+<h3 class="text-primary font-bold text-lg mb-2">Our Community</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400">Join over 5,000 students worldwide on a journey of wellness and vocal discovery.</p>
+</div>
+<div class="rounded-2xl overflow-hidden shadow-xl aspect-[3/4] bg-primary/10">
+<img alt="Person singing" class="w-full h-full object-cover" data-alt="Person singing with closed eyes and peace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnBLWRREDw0OhdO2F-jbNMpCp1UfX68orFPJgEc5T4hQDtNj91xMz5kgwj2HhFaqecnXyFenNpOQexNOTtW1y9QKzKVpRUVxpRwvq1BOIBgMQ2K1BZAjQg1MxzhA1cO_-1GCyFMzY1AR5a4IBhJat8KdTt9duud4P1YN6aIZxWvdSrZDy7OZ8MhJQuoBQvoyVgSNdrXt_royvBsXx7m4QZe5heI8JEfsycfaL8VAgdGB-xeQJnBTlfwNJg-HW2ZBM7xOVhaotce7Uf"/>
+</div>
+</div>
+</div>
+<div class="flex-1">
+<div class="mb-10 text-center lg:text-left">
+<h2 class="text-slate-900 dark:text-slate-100 text-3xl font-bold mb-4">What Our Students Say</h2>
+<div class="h-1 w-20 bg-primary mx-auto lg:mx-0"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-white dark:bg-slate-800/50 p-6 rounded-2xl border border-primary/10 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center gap-4 mb-4">
+<div class="size-12 rounded-full overflow-hidden bg-primary/20">
+<img alt="Anna K." class="w-full h-full object-cover" data-alt="Portrait of student Anna K" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_u9XQEJ2ss9EyScLOvB3oiXtIgJi-WqZfwoj2-7evaxcdYdTjceTOGAz5CTKWmWlMToVh8ByI7Cgfmp-YoUIL324NN5bm4dOz-5iPTMZvK_uE_2ycXnQs2oK6oF1_SWs9stDfXA3IQ_S75iGql71KTD3IeljSClD0x3i-KnTCi8j7SttsnjAhIUIo_3g_UHPLAm4p9XthhePYxkxMKdNqFZzOP8XPjc3VgPGZGPBdIMerMTBtAsMZUZFTun-xeev0wte2XHrUrsE6"/>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-slate-100">Anna K.</h4>
+<p class="text-xs text-slate-500">2 days ago</p>
+</div>
+<div class="ml-auto flex text-primary">
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+</div>
+</div>
+<p class="text-slate-700 dark:text-slate-300 leading-relaxed mb-4 italic">
+                                    "This course changed my life. The atmosphere is so supportive. / Tämä kurssi muutti elämäni. Ilmapiiri on todella tukeva."
+                                </p>
+<div class="flex gap-4 text-slate-400">
+<button class="flex items-center gap-1 hover:text-primary transition-colors text-sm">
+<span class="material-symbols-outlined text-lg">thumb_up</span> 12
+                                    </button>
+<button class="flex items-center gap-1 hover:text-red-400 transition-colors text-sm">
+<span class="material-symbols-outlined text-lg">thumb_down</span>
+</button>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800/50 p-6 rounded-2xl border border-primary/10 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center gap-4 mb-4">
+<div class="size-12 rounded-full overflow-hidden bg-primary/20">
+<img alt="Mikko L." class="w-full h-full object-cover" data-alt="Portrait of student Mikko L" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBS-1Ooy_lK-6-jsZlj_bdflRMbFn38I10N7dlNyjUNJtsQWBNMwwOLmqf7pw4xWE69Ul0f2VnuMWM3UNnscwWQuUjgEcu2rbF3vnJW_rm1w0oYpwwUI_ktXqcbYRjYVCvcjrqIDa5uNxt9NYQxA-kqwR66KlFz_c-2xpN10D-B3emRqyO1NrHQkUo1F1ihjWdB-R3mouorIyWqFigANfcwINPxve6Q1n0T8JwVkaZ7M2NsXbvAsGuPcPj4oAoogcvz2_qk9mlXlyxR"/>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-slate-100">Mikko L.</h4>
+<p class="text-xs text-slate-500">1 week ago</p>
+</div>
+<div class="ml-auto flex text-primary">
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+</div>
+</div>
+<p class="text-slate-700 dark:text-slate-300 leading-relaxed mb-4 italic">
+                                    "I found my voice here. Highly recommended! / Löysin ääneni täältä. Suosittelen lämpimästi!"
+                                </p>
+<div class="flex gap-4 text-slate-400">
+<button class="flex items-center gap-1 hover:text-primary transition-colors text-sm">
+<span class="material-symbols-outlined text-lg">thumb_up</span> 8
+                                    </button>
+<button class="flex items-center gap-1 hover:text-red-400 transition-colors text-sm">
+<span class="material-symbols-outlined text-lg">thumb_down</span>
+</button>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800/50 p-6 rounded-2xl border border-primary/10 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center gap-4 mb-4">
+<div class="size-12 rounded-full overflow-hidden bg-primary/20">
+<img alt="Sarah J." class="w-full h-full object-cover" data-alt="Portrait of student Sarah J" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAae5KmUNpnfp4gSg0hb_V5QiqLfL2uz7UiA8vQ59yUP5roE7vEVWOEh_okAXygbZgyhV1ZiGHH3rfBTo6CIMgac0fpZPLtoDmsWKxHaPC0U6rqG52BrCF1ZPGeemB_jBB27SrSPZy2lkqOkG-hWHHcp2Y7p6pUyxnm6vEjTMCNxaHe1UUgnmlC0wwD---SzeT8-uV_89-S5fLqZu5F4_2uv3IXS2UqKMGGbHm_Zui_y-powNjHU0pnVUDShVGliMBYeClKtFn8zYfT"/>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-slate-100">Sarah J.</h4>
+<p class="text-xs text-slate-500">2 weeks ago</p>
+</div>
+<div class="ml-auto flex text-primary">
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+</div>
+</div>
+<p class="text-slate-700 dark:text-slate-300 leading-relaxed mb-4 italic">
+                                    "Beautiful facilities and great teachers. / Kauniit tilat ja loistavat opettajat."
+                                </p>
+<div class="flex gap-4 text-slate-400">
+<button class="flex items-center gap-1 hover:text-primary transition-colors text-sm">
+<span class="material-symbols-outlined text-lg">thumb_up</span> 15
+                                    </button>
+<button class="flex items-center gap-1 hover:text-red-400 transition-colors text-sm">
+<span class="material-symbols-outlined text-lg">thumb_down</span>
+</button>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800/50 p-6 rounded-2xl border border-primary/10 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center gap-4 mb-4">
+<div class="size-12 rounded-full overflow-hidden bg-primary/20">
+<img alt="Elena M." class="w-full h-full object-cover" data-alt="Portrait of student Elena M" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGpyXc47S18_A0Jxmmh8PuDqfZO9QknvYy7DXypO9YYmQgHK7k1np5VP4NXWUxEKn_ltNALZ2BADwscRnrF5wQiXWbFTTyYBO_12p35yf03fyQhMa1n5HnTsLkdfUoS-8SEPMHVnNxtyEdPcUEgJvsmjFovMd7YgGMy6sr3uHOYFITnp3_orJwBHGv8CxnKd024Izu0OVKSF5DiOlKiqsJV76X7ASoeNNqZmBuXWXZEzPJiluYsym3DsJhZXg5ZXSxSfC4cc6bLujP"/>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-slate-100">Elena M.</h4>
+<p class="text-xs text-slate-500">1 month ago</p>
+</div>
+<div class="ml-auto flex text-primary">
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+</div>
+</div>
+<p class="text-slate-700 dark:text-slate-300 leading-relaxed mb-4 italic">
+                                    "A perfect escape from daily stress. / Täydellinen pako arjen stressistä."
+                                </p>
+<div class="flex gap-4 text-slate-400">
+<button class="flex items-center gap-1 hover:text-primary transition-colors text-sm">
+<span class="material-symbols-outlined text-lg">thumb_up</span> 22
+                                    </button>
+<button class="flex items-center gap-1 hover:text-red-400 transition-colors text-sm">
+<span class="material-symbols-outlined text-lg">thumb_down</span>
+</button>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800/50 p-6 rounded-2xl border border-primary/10 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center gap-4 mb-4">
+<div class="size-12 rounded-full overflow-hidden bg-primary/20">
+<img alt="Thomas R." class="w-full h-full object-cover" data-alt="Portrait of student Thomas R" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxUtH3_5AdNjl1NtsGpRPyBKWP3GHQm2klahVg2HKWEgqx6LTOP-l8nN7W6gnWEc9ZIqdr3N7IHZCXVjOIAP0gixkSszfpQgzGKErNQK13TYO5bTeqCw0VwliA7ot8uB8TSSknHz3xLBToJ0cx3m7r7h9DATXlRTyGEuKyd23p88NNGGc1lyd46-MD74QW1XqBuv3lF0g_Cag76uSz7pL2zrFSY7QnaZTxjD9eM13XxAshz94FdZT2PiR8bPM5PbDF3k31kPnefafw"/>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-slate-100">Thomas R.</h4>
+<p class="text-xs text-slate-500">1 month ago</p>
+</div>
+<div class="ml-auto flex text-primary">
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+</div>
+</div>
+<p class="text-slate-700 dark:text-slate-300 leading-relaxed mb-4 italic">
+                                    "The wellness approach is very holistic. / Hyvinvointilähestymistapa on erittäin kokonaisvaltainen."
+                                </p>
+<div class="flex gap-4 text-slate-400">
+<button class="flex items-center gap-1 hover:text-primary transition-colors text-sm">
+<span class="material-symbols-outlined text-lg">thumb_up</span> 9
+                                    </button>
+<button class="flex items-center gap-1 hover:text-red-400 transition-colors text-sm">
+<span class="material-symbols-outlined text-lg">thumb_down</span>
+</button>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800/50 p-6 rounded-2xl border border-primary/10 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center gap-4 mb-4">
+<div class="size-12 rounded-full overflow-hidden bg-primary/20">
+<img alt="Linda S." class="w-full h-full object-cover" data-alt="Portrait of student Linda S" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1YD555RIY4tJW8mMcihiRkF9_6M_6oIBbpykVBZKUGwmoeJWsLfp6rCLOeACRQ_5Vcek2nhFdZXXrVDXhVckeglXzAh-ebseB1qhkldUa6Hv6QsdTIn9BIWIt2C8c2qlUMsgKfD5Mf3voHDhoUnQKIu-GMpY9zP6F1cdEC4Ip7wlb9XmBHyeHBx4u6r1JsE_v90dDUZMycc1M0Fo-bPUIWNFaw-fk6E3D7SAqA75gu1TP7dfVrl_NU59P9mrFE7K7Y69o4ND7RyR4"/>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-slate-100">Linda S.</h4>
+<p class="text-xs text-slate-500">2 months ago</p>
+</div>
+<div class="ml-auto flex text-primary">
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+</div>
+</div>
+<p class="text-slate-700 dark:text-slate-300 leading-relaxed mb-4 italic">
+                                    "Peaceful and inspiring environment. / Rauhallinen ja inspiroiva ympäristö."
+                                </p>
+<div class="flex gap-4 text-slate-400">
+<button class="flex items-center gap-1 hover:text-primary transition-colors text-sm">
+<span class="material-symbols-outlined text-lg">thumb_up</span> 11
+                                    </button>
+<button class="flex items-center gap-1 hover:text-red-400 transition-colors text-sm">
+<span class="material-symbols-outlined text-lg">thumb_down</span>
+</button>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800/50 p-6 rounded-2xl border border-primary/10 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center gap-4 mb-4">
+<div class="size-12 rounded-full overflow-hidden bg-primary/20">
+<img alt="Johannes P." class="w-full h-full object-cover" data-alt="Portrait of student Johannes P" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQzF-YOInKwnb8rvip9QZIk_dAofGC9jOwHhyqJtLWwt-jpAJ0dH8ud8ZqStiCSsNCF_EVb8hxFkVEfU0Fid5vmE1fqVHnKtgjo8DwQoaPCQLVmLCvcI81aIdEtU5Afl9BLZ-n9EG1qXjKrlPoaIKd_OfBJMdlsM5l2mFDA3VmciJx3lov7_Q5Pwcyv5FfrvsDLltV--7-DV-gPkA1kw23oi-wYJhR_sgXoq4MQLEnMO2838f0kOXgmas1J-f-0xrhdej4oZWrbQ60"/>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-slate-100">Johannes P.</h4>
+<p class="text-xs text-slate-500">2 months ago</p>
+</div>
+<div class="ml-auto flex text-primary">
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+</div>
+</div>
+<p class="text-slate-700 dark:text-slate-300 leading-relaxed mb-4 italic">
+                                    "Great community feel. / Mahtava yhteisöllisyyden tunne."
+                                </p>
+<div class="flex gap-4 text-slate-400">
+<button class="flex items-center gap-1 hover:text-primary transition-colors text-sm">
+<span class="material-symbols-outlined text-lg">thumb_up</span> 6
+                                    </button>
+<button class="flex items-center gap-1 hover:text-red-400 transition-colors text-sm">
+<span class="material-symbols-outlined text-lg">thumb_down</span>
+</button>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800/50 p-6 rounded-2xl border border-primary/10 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center gap-4 mb-4">
+<div class="size-12 rounded-full overflow-hidden bg-primary/20">
+<img alt="Maria W." class="w-full h-full object-cover" data-alt="Portrait of student Maria W" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdEQDcI0RHueBN_vQ9uCcxlHGJIiW34w82EIzrzt148f-08vBCMIAs99q-VFjjsiEQ6eHvmwD1OOoB29oYu6pgpCl219Hw-rDCs91vJflLefX-JBmgNeE2ej-4vdVQyNybpLeIWytFasUaXmPr9fyeD1LDz_YKUNdeikYWdabNFbdtGRRC9fWnGWM811d7G2FqqaYVpIn2_GaD5ZhQxq9-blLWLB6gFppo3tdyr5NMlATnbE302NuoOzQ4Z0N2HKM5gWSx4ZxuXFYC"/>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-slate-100">Maria W.</h4>
+<p class="text-xs text-slate-500">3 months ago</p>
+</div>
+<div class="ml-auto flex text-primary">
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+</div>
+</div>
+<p class="text-slate-700 dark:text-slate-300 leading-relaxed mb-4 italic">
+                                    "Transformative experience for my singing. / Uudistava kokemus laululleni."
+                                </p>
+<div class="flex gap-4 text-slate-400">
+<button class="flex items-center gap-1 hover:text-primary transition-colors text-sm">
+<span class="material-symbols-outlined text-lg">thumb_up</span> 20
+                                    </button>
+<button class="flex items-center gap-1 hover:text-red-400 transition-colors text-sm">
+<span class="material-symbols-outlined text-lg">thumb_down</span>
+</button>
+</div>
+</div>
+</div>
+<div class="mt-16 p-8 bg-primary/20 rounded-3xl text-center">
+<h3 class="text-2xl font-bold mb-4">Ready to start your own story?</h3>
+<p class="text-slate-700 dark:text-slate-300 mb-8 max-w-xl mx-auto">Join our next intake and discover the power of wellness-focused education.</p>
+<div class="flex flex-wrap justify-center gap-4">
+<button class="bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 h-12 px-8 rounded-lg font-bold hover:scale-105 transition-transform">Explore Courses</button>
+<button class="bg-white dark:bg-slate-700 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-600 h-12 px-8 rounded-lg font-bold hover:bg-slate-50 dark:hover:bg-slate-600 transition-colors">Contact Us</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-white dark:bg-slate-900 border-t border-primary/20 py-12 px-6">
+<div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-2">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary text-3xl">eco</span>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold">Wellness Academy</h2>
+</div>
+<p class="text-slate-500 dark:text-slate-400 max-w-xs mb-6">Nurturing body, mind, and voice through holistic education and community support.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined p-2 rounded-full bg-primary/10 text-primary cursor-pointer hover:bg-primary/20 transition-colors">public</span>
+<span class="material-symbols-outlined p-2 rounded-full bg-primary/10 text-primary cursor-pointer hover:bg-primary/20 transition-colors">alternate_email</span>
+<span class="material-symbols-outlined p-2 rounded-full bg-primary/10 text-primary cursor-pointer hover:bg-primary/20 transition-colors">chat</span>
+</div>
+</div>
+<div>
+<h4 class="font-bold mb-4">Quick Links</h4>
+<ul class="space-y-2 text-slate-600 dark:text-slate-400 text-sm">
+<li class="hover:text-primary cursor-pointer transition-colors">Our Method</li>
+<li class="hover:text-primary cursor-pointer transition-colors">Student Portal</li>
+<li class="hover:text-primary cursor-pointer transition-colors">Privacy Policy</li>
+<li class="hover:text-primary cursor-pointer transition-colors">Terms of Service</li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-4">Newsletter</h4>
+<div class="flex gap-2">
+<input class="bg-slate-100 dark:bg-slate-800 border-none rounded-lg h-10 px-4 text-sm w-full focus:ring-2 focus:ring-primary outline-none" placeholder="Email" type="email"/>
+<button class="bg-primary p-2 rounded-lg text-slate-900">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-6xl mx-auto border-t border-slate-100 dark:border-slate-800 mt-12 pt-8 text-center text-slate-500 text-xs">
+                © 2024 Wellness Academy. All rights reserved.
+            </div>
+</footer>
+</div>
+</body></html>
+
+<!-- Pricing & Contact -->

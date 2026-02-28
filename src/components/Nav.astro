@@ -1,0 +1,117 @@
+---
+interface Props {
+  currentPage?: string;
+  lang?: "fi" | "en";
+}
+
+const { currentPage = "", lang = "fi" } = Astro.props;
+
+import lilithLogo from "../assets/images/lilith-logo.jpg";
+
+const navLinksFi = [
+  { href: "/", label: "Koti", id: "koti" },
+  { href: "/riikka", label: "Riikka", id: "riikka" },
+  { href: "/sinulle", label: "Sinulle?", id: "sinulle" },
+  { href: "/palautteet", label: "Palautteita", id: "palautteet" },
+  { href: "/hinnat", label: "Hinnat ja yhteys", id: "hinnat" },
+  { href: "/blogi", label: "Blogi", id: "blogi" },
+];
+
+const navLinksEn = [
+  { href: "/en", label: "Home", id: "koti" },
+  { href: "/en/riikka", label: "Riikka", id: "riikka" },
+  { href: "/en/for-you", label: "For You?", id: "sinulle" },
+  { href: "/en/testimonials", label: "Testimonials", id: "palautteet" },
+  { href: "/en/pricing", label: "Pricing & Contact", id: "hinnat" },
+  { href: "/en/blog", label: "Blog", id: "blogi" },
+];
+
+const navLinks = lang === "en" ? navLinksEn : navLinksFi;
+---
+
+<header
+  class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 px-6 md:px-20 py-4 bg-background-light/80 backdrop-blur-md sticky top-0 z-50"
+>
+  <a href={lang === "en" ? "/en" : "/"} class="flex items-center gap-3 min-[1920px]:gap-5 no-underline">
+    <img
+      src={lilithLogo.src}
+      alt="Lilith Osuuskunta"
+      class="h-10 xl:h-12 2xl:h-14 min-[1920px]:h-20 w-auto rounded"
+    />
+    <div class="flex flex-col">
+      <h2 class="text-slate-900 text-lg xl:text-xl 2xl:text-2xl min-[1920px]:text-4xl font-bold leading-tight tracking-tight">
+        Lilith
+      </h2>
+      <span class="text-[10px] xl:text-xs 2xl:text-sm min-[1920px]:text-lg uppercase tracking-widest opacity-70"
+        >Osuuskunta</span
+      >
+    </div>
+  </a>
+
+  <nav class="hidden lg:flex flex-1 justify-center gap-8 2xl:gap-12 min-[1920px]:gap-16">
+    {
+      navLinks.map((link) => (
+        <a
+          href={link.href}
+          class:list={[
+            "text-sm xl:text-base 2xl:text-xl min-[1920px]:text-2xl font-medium hover:text-primary transition-colors",
+            currentPage === link.id
+              ? "text-primary font-bold"
+              : "text-slate-700",
+          ]}
+        >
+          {link.label}
+        </a>
+      ))
+    }
+  </nav>
+
+  <div class="flex items-center gap-4 min-[1920px]:gap-6">
+    <a
+      href={lang === "en" ? "/" : "/en"}
+      class="flex min-w-[60px] min-[1920px]:min-w-[80px] cursor-pointer items-center justify-center rounded-full h-10 xl:h-12 min-[1920px]:h-16 px-4 xl:px-5 min-[1920px]:px-8 bg-primary/10 text-primary text-sm xl:text-base 2xl:text-lg min-[1920px]:text-2xl font-bold hover:bg-primary/20 transition-all no-underline"
+    >
+      {lang === "en" ? "FI" : "EN"}
+    </a>
+
+    <!-- Mobile menu button -->
+    <button
+      id="mobile-menu-btn"
+      class="lg:hidden flex items-center justify-center rounded-lg h-10 w-10 bg-primary/10 text-primary hover:bg-primary/20 transition-all"
+    >
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile navigation -->
+<nav
+  id="mobile-menu"
+  class="hidden lg:hidden fixed inset-0 top-[65px] z-40 bg-background-light/95 backdrop-blur-md"
+>
+  <div class="flex flex-col items-center gap-6 pt-12">
+    {
+      navLinks.map((link) => (
+        <a
+          href={link.href}
+          class:list={[
+            "text-lg font-medium hover:text-primary transition-colors",
+            currentPage === link.id
+              ? "text-primary font-bold"
+              : "text-slate-700",
+          ]}
+        >
+          {link.label}
+        </a>
+      ))
+    }
+  </div>
+</nav>
+
+<script>
+  const btn = document.getElementById("mobile-menu-btn");
+  const menu = document.getElementById("mobile-menu");
+  btn?.addEventListener("click", () => {
+    menu?.classList.toggle("hidden");
+  });
+</script>

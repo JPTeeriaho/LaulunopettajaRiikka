@@ -1,0 +1,35 @@
+{
+  "hero": {
+    "title": "Walking alongside your voice",
+    "subtitle": "Find your voice. Gently.",
+    "ctaText": "Book a lesson",
+    "ctaHref": "https://pro.vello.fi/laulustudioriikka-ajanvaraus/"
+  },
+  "intro": {
+    "heading": "Welcome to singing",
+    "text": "I am a voice teacher and music pedagogue based in Oulu, Finland, with over a decade of experience. I teach at Karjasilta, Oulu, under the cooperative Lilith. Student spots open up from time to time. Hobbyists and professionals of all levels and ages are welcome, regardless of musical genre.",
+    "note": "Note: Singing lessons can also help with performance anxiety and support people who use their voice professionally.",
+    "readMoreText": "Read more about me",
+    "readMoreHref": "/en/riikka",
+    "quoteText": "Music is the language of the soul."
+  },
+  "testimonialPreview": {
+    "heading": "What students say",
+    "cards": [
+      {
+        "quote": "I have found the joy of singing — and even performing. I call my lessons with Riikka 'singing therapy sessions.' After the lessons, I am without exception very energetic and empowered. Thank you, Riikka.",
+        "author": "Jarmo, 57",
+        "role": "Psychotherapist",
+        "icon": "psychology"
+      },
+      {
+        "quote": "I went to a singing lesson. It had been about three years since the last time. But what an experience! Riikka Vuorijärvi got me to really breathe properly, and when I opened my mouth — things started happening. I recommend Riikka's singing lessons from the bottom of my heart.",
+        "author": "Woman, 36",
+        "role": "Music pedagogue",
+        "icon": "school"
+      }
+    ],
+    "readMoreText": "Read more testimonials",
+    "readMoreHref": "/en/testimonials"
+  }
+}
