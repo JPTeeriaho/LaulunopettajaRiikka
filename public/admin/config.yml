@@ -1,9 +1,6 @@
 backend:
-  name: github
-  repo: JPTeeriaho/LaulunopettajaRiikka
+  name: git-gateway
   branch: main
-  auth_type: pkce
-  app_id: Ov23liwOYs1DUOoywdtW
 
 # Mediatiedostot
 media_folder: "src/assets/images"
