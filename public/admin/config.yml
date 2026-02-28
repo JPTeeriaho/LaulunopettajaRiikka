@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: Teeriaho/LaulunopettajaRiikka
+  repo: JPTeeriaho/LaulunopettajaRiikka
   branch: main
   # OAuth: tarvitaan erillinen OAuth-proxy Cloudflare Workeriin
   # (konfiguroidaan deployn jälkeen — sivu toimii ilman CMS:ää jo nyt)
