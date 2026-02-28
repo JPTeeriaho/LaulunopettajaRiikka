@@ -2,8 +2,8 @@ backend:
   name: github
   repo: JPTeeriaho/LaulunopettajaRiikka
   branch: main
-  # OAuth: tarvitaan erillinen OAuth-proxy Cloudflare Workeriin
-  # (konfiguroidaan deployn jälkeen — sivu toimii ilman CMS:ää jo nyt)
+  auth_type: pkce
+  app_id: Ov23liwOYs1DUOoywdtW
 
 # Mediatiedostot
 media_folder: "src/assets/images"
