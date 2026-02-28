@@ -4,6 +4,7 @@ backend:
   branch: main
   auth_type: pkce
   app_id: Ov23liwOYs1DUOoywdtW
+  auth_endpoint: https://github.com/login/oauth/authorize
 
 # Mediatiedostot
 media_folder: "src/assets/images"
