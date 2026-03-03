@@ -26,7 +26,7 @@ collections:
       - { label: "Kategoria", name: "category", widget: "string" }
       - { label: "Päivämäärä", name: "date", widget: "string", hint: "Muoto: 2023-10-15" }
       - { label: "Tiivistelmä", name: "excerpt", widget: "text" }
-      - { label: "Kuva-URL", name: "image", widget: "string" }
+      - { label: "Kuva", name: "image", widget: "image" }
       - { label: "Kieli", name: "lang", widget: "select", options: ["fi", "en"], default: "fi" }
       - { label: "Järjestys", name: "order", widget: "number", required: false }
       - { label: "Sisältö", name: "body", widget: "markdown" }
