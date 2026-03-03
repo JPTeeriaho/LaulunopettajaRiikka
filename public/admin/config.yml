@@ -3,8 +3,8 @@ backend:
   branch: main
 
 # Mediatiedostot
-media_folder: "src/assets/images"
-public_folder: "/src/assets/images"
+media_folder: "public/images"
+public_folder: "/images"
 
 # Lokalisointi
 locale: "fi"
@@ -204,6 +204,14 @@ collections:
         label: "Riikka (FI)"
         file: "src/data/riikka-fi.json"
         fields:
+          - label: "Kuvat"
+            name: "images"
+            widget: "object"
+            fields:
+              - { label: "Hero-taustakuva", name: "hero", widget: "image" }
+              - { label: "Profiilikuva", name: "profile", widget: "image" }
+              - { label: "Taidekuva 1", name: "art1", widget: "image" }
+              - { label: "Taidekuva 2", name: "art2", widget: "image" }
           - label: "Hero"
             name: "hero"
             widget: "object"
@@ -253,6 +261,14 @@ collections:
         label: "Riikka (EN)"
         file: "src/data/riikka-en.json"
         fields:
+          - label: "Images"
+            name: "images"
+            widget: "object"
+            fields:
+              - { label: "Hero background", name: "hero", widget: "image" }
+              - { label: "Profile photo", name: "profile", widget: "image" }
+              - { label: "Art image 1", name: "art1", widget: "image" }
+              - { label: "Art image 2", name: "art2", widget: "image" }
           - label: "Hero"
             name: "hero"
             widget: "object"
@@ -562,6 +578,11 @@ collections:
             fields:
               - { label: "Facebook", name: "facebook", widget: "string" }
               - { label: "YouTube", name: "youtube", widget: "string" }
+      - name: "analytics"
+        label: "Google Analytics"
+        file: "src/data/settings.json"
+        fields:
+          - { label: "Google Analytics Measurement ID (esim. G-XXXXXXXXXX)", name: "googleAnalyticsId", widget: "string", required: false, hint: "Jätä tyhjäksi jos et halua seurantaa. Löytyy Google Analytics → Admin → Data Streams." }
       - name: "maps"
         label: "Kartta-upotus"
         file: "src/data/maps-embed.json"

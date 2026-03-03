@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import settings from "../data/settings.json";
 
 interface Props {
   title: string;
@@ -7,6 +8,7 @@ interface Props {
 }
 
 const { title, description = "Riikka Vuorijärvi — Laulunopettaja & Musiikkipedagogi, Oulu" } = Astro.props;
+const gaId = settings.googleAnalyticsId;
 ---
 
 <!doctype html>
@@ -27,6 +29,17 @@ const { title, description = "Riikka Vuorijärvi — Laulunopettaja & Musiikkipe
     />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    {gaId && (
+      <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
+    )}
+    {gaId && (
+      <script is:inline define:vars={{ gaId }}>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', gaId);
+      </script>
+    )}
     <script is:inline src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body class="bg-background-light font-display text-slate-900">
