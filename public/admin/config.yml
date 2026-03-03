@@ -123,7 +123,7 @@ collections:
         label: "Etusivu (FI)"
         file: "src/data/home-fi.json"
         fields:
-          - { label: "SEO-kuvaus (Google-hakutuloksissa)", name: "seoDescription", widget: "text", hint: "Max 160 merkkiä. Näkyy hakukoneissa sivun otsikon alla." }
+          - { label: "SEO-kuvaus (Google & some)", name: "seoDescription", widget: "text", hint: "Max 160 merkkiä. Tämä teksti näkyy Google-hakutuloksissa otsikon alla JA kun sivua jaetaan somessa (Facebook, WhatsApp, LinkedIn). Päivitä aina kun sivun sisältö muuttuu olennaisesti." }
           - label: "Kuvat"
             name: "images"
             widget: "object"
@@ -137,8 +137,8 @@ collections:
             fields:
               - { label: "Otsikko", name: "title", widget: "string" }
               - { label: "Alaotsikko", name: "subtitle", widget: "string" }
-              - { label: "CTA-teksti", name: "ctaText", widget: "string" }
-              - { label: "CTA-linkki", name: "ctaHref", widget: "string" }
+              - { label: "Toimintakehotteen teksti (CTA-nappi)", name: "ctaText", widget: "string", hint: "Tärkeä! Tämä on hero-kuvan päällä oleva nappi, joka ohjaa kävijän toimintaan (esim. Varaa tunti). Lyhyt ja selkeä teksti toimii parhaiten." }
+              - { label: "Toimintakehotteen linkki (CTA-nappi)", name: "ctaHref", widget: "string", hint: "Mihin osoitteeseen nappi vie (esim. ajanvaraus-URL tai #hinnasto)." }
           - label: "Esittely"
             name: "intro"
             widget: "object"
@@ -168,7 +168,7 @@ collections:
         label: "Home (EN)"
         file: "src/data/home-en.json"
         fields:
-          - { label: "SEO description (shown in Google results)", name: "seoDescription", widget: "text", hint: "Max 160 characters. Shown below page title in search results." }
+          - { label: "SEO description (Google & social media)", name: "seoDescription", widget: "text", hint: "Max 160 characters. This text appears in Google search results AND when the page is shared on social media (Facebook, WhatsApp, LinkedIn). Update whenever page content changes significantly." }
           - label: "Images"
             name: "images"
             widget: "object"
@@ -182,8 +182,8 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Subtitle", name: "subtitle", widget: "string" }
-              - { label: "CTA text", name: "ctaText", widget: "string" }
-              - { label: "CTA link", name: "ctaHref", widget: "string" }
+              - { label: "Action button text (CTA button)", name: "ctaText", widget: "string", hint: "Important! This is the button on the hero image that guides visitors to take action (e.g. Book a lesson). Short and clear text works best." }
+              - { label: "Action button link (CTA button)", name: "ctaHref", widget: "string", hint: "Where the button leads (e.g. booking URL or #pricing)." }
           - label: "Intro"
             name: "intro"
             widget: "object"
@@ -220,7 +220,7 @@ collections:
         label: "Riikka (FI)"
         file: "src/data/riikka-fi.json"
         fields:
-          - { label: "SEO-kuvaus (Google-hakutuloksissa)", name: "seoDescription", widget: "text", hint: "Max 160 merkkiä. Näkyy hakukoneissa sivun otsikon alla." }
+          - { label: "SEO-kuvaus (Google & some)", name: "seoDescription", widget: "text", hint: "Max 160 merkkiä. Tämä teksti näkyy Google-hakutuloksissa otsikon alla JA kun sivua jaetaan somessa (Facebook, WhatsApp, LinkedIn). Päivitä aina kun sivun sisältö muuttuu olennaisesti." }
           - label: "Kuvat"
             name: "images"
             widget: "object"
@@ -278,7 +278,7 @@ collections:
         label: "Riikka (EN)"
         file: "src/data/riikka-en.json"
         fields:
-          - { label: "SEO description (shown in Google results)", name: "seoDescription", widget: "text", hint: "Max 160 characters. Shown below page title in search results." }
+          - { label: "SEO description (Google & social media)", name: "seoDescription", widget: "text", hint: "Max 160 characters. This text appears in Google search results AND when the page is shared on social media (Facebook, WhatsApp, LinkedIn). Update whenever page content changes significantly." }
           - label: "Images"
             name: "images"
             widget: "object"
@@ -343,7 +343,7 @@ collections:
         label: "Sinulle (FI)"
         file: "src/data/sinulle-fi.json"
         fields:
-          - { label: "SEO-kuvaus (Google-hakutuloksissa)", name: "seoDescription", widget: "text", hint: "Max 160 merkkiä. Näkyy hakukoneissa sivun otsikon alla." }
+          - { label: "SEO-kuvaus (Google & some)", name: "seoDescription", widget: "text", hint: "Max 160 merkkiä. Tämä teksti näkyy Google-hakutuloksissa otsikon alla JA kun sivua jaetaan somessa (Facebook, WhatsApp, LinkedIn). Päivitä aina kun sivun sisältö muuttuu olennaisesti." }
           - label: "Kuvat"
             name: "images"
             widget: "object"
@@ -357,8 +357,8 @@ collections:
             fields:
               - { label: "Otsikko", name: "title", widget: "string" }
               - { label: "Alaotsikko", name: "subtitle", widget: "string" }
-              - { label: "CTA-teksti", name: "ctaText", widget: "string" }
-              - { label: "CTA-linkki", name: "ctaHref", widget: "string" }
+              - { label: "Toimintakehotteen teksti (CTA-nappi)", name: "ctaText", widget: "string", hint: "Tärkeä! Tämä on hero-kuvan päällä oleva nappi, joka ohjaa kävijän toimintaan (esim. Varaa tunti). Lyhyt ja selkeä teksti toimii parhaiten." }
+              - { label: "Toimintakehotteen linkki (CTA-nappi)", name: "ctaHref", widget: "string", hint: "Mihin osoitteeseen nappi vie (esim. ajanvaraus-URL tai #hinnasto)." }
           - { label: "Osion otsikko", name: "sectionHeading", widget: "string" }
           - label: "Miksi Riikka?"
             name: "whyRiikka"
@@ -369,13 +369,13 @@ collections:
                 name: "paragraphs"
                 widget: "list"
                 field: { label: "Kappale", name: "paragraph", widget: "text" }
-              - { label: "CTA-teksti", name: "ctaText", widget: "string" }
-              - { label: "CTA-linkki", name: "ctaHref", widget: "string" }
+              - { label: "Toimintakehotteen teksti (CTA-nappi)", name: "ctaText", widget: "string", hint: "Tärkeä! Tämä on hero-kuvan päällä oleva nappi, joka ohjaa kävijän toimintaan (esim. Varaa tunti). Lyhyt ja selkeä teksti toimii parhaiten." }
+              - { label: "Toimintakehotteen linkki (CTA-nappi)", name: "ctaHref", widget: "string", hint: "Mihin osoitteeseen nappi vie (esim. ajanvaraus-URL tai #hinnasto)." }
       - name: "sinulle-en"
         label: "For You (EN)"
         file: "src/data/sinulle-en.json"
         fields:
-          - { label: "SEO description (shown in Google results)", name: "seoDescription", widget: "text", hint: "Max 160 characters. Shown below page title in search results." }
+          - { label: "SEO description (Google & social media)", name: "seoDescription", widget: "text", hint: "Max 160 characters. This text appears in Google search results AND when the page is shared on social media (Facebook, WhatsApp, LinkedIn). Update whenever page content changes significantly." }
           - label: "Images"
             name: "images"
             widget: "object"
@@ -389,8 +389,8 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Subtitle", name: "subtitle", widget: "string" }
-              - { label: "CTA text", name: "ctaText", widget: "string" }
-              - { label: "CTA link", name: "ctaHref", widget: "string" }
+              - { label: "Action button text (CTA button)", name: "ctaText", widget: "string", hint: "Important! This is the button on the hero image that guides visitors to take action (e.g. Book a lesson). Short and clear text works best." }
+              - { label: "Action button link (CTA button)", name: "ctaHref", widget: "string", hint: "Where the button leads (e.g. booking URL or #pricing)." }
           - { label: "Section heading", name: "sectionHeading", widget: "string" }
           - label: "Why Riikka?"
             name: "whyRiikka"
@@ -401,8 +401,8 @@ collections:
                 name: "paragraphs"
                 widget: "list"
                 field: { label: "Paragraph", name: "paragraph", widget: "text" }
-              - { label: "CTA text", name: "ctaText", widget: "string" }
-              - { label: "CTA link", name: "ctaHref", widget: "string" }
+              - { label: "Action button text (CTA button)", name: "ctaText", widget: "string", hint: "Important! This is the button on the hero image that guides visitors to take action (e.g. Book a lesson). Short and clear text works best." }
+              - { label: "Action button link (CTA button)", name: "ctaHref", widget: "string", hint: "Where the button leads (e.g. booking URL or #pricing)." }
 
   # ──────────────────────────────────────────
   # PALAUTTEET-SIVU / TESTIMONIALS PAGE
@@ -414,7 +414,7 @@ collections:
         label: "Palautesivu (FI)"
         file: "src/data/palautteet-fi.json"
         fields:
-          - { label: "SEO-kuvaus (Google-hakutuloksissa)", name: "seoDescription", widget: "text", hint: "Max 160 merkkiä. Näkyy hakukoneissa sivun otsikon alla." }
+          - { label: "SEO-kuvaus (Google & some)", name: "seoDescription", widget: "text", hint: "Max 160 merkkiä. Tämä teksti näkyy Google-hakutuloksissa otsikon alla JA kun sivua jaetaan somessa (Facebook, WhatsApp, LinkedIn). Päivitä aina kun sivun sisältö muuttuu olennaisesti." }
           - label: "Kuvat"
             name: "images"
             widget: "object"
@@ -428,8 +428,8 @@ collections:
             fields:
               - { label: "Otsikko", name: "title", widget: "string" }
               - { label: "Alaotsikko", name: "subtitle", widget: "text" }
-              - { label: "CTA-teksti", name: "ctaText", widget: "string" }
-              - { label: "CTA-linkki", name: "ctaHref", widget: "string" }
+              - { label: "Toimintakehotteen teksti (CTA-nappi)", name: "ctaText", widget: "string", hint: "Tärkeä! Tämä on hero-kuvan päällä oleva nappi, joka ohjaa kävijän toimintaan (esim. Varaa tunti). Lyhyt ja selkeä teksti toimii parhaiten." }
+              - { label: "Toimintakehotteen linkki (CTA-nappi)", name: "ctaHref", widget: "string", hint: "Mihin osoitteeseen nappi vie (esim. ajanvaraus-URL tai #hinnasto)." }
           - label: "Videolinkit"
             name: "videoLinks"
             widget: "list"
@@ -451,7 +451,7 @@ collections:
         label: "Testimonials page (EN)"
         file: "src/data/palautteet-en.json"
         fields:
-          - { label: "SEO description (shown in Google results)", name: "seoDescription", widget: "text", hint: "Max 160 characters. Shown below page title in search results." }
+          - { label: "SEO description (Google & social media)", name: "seoDescription", widget: "text", hint: "Max 160 characters. This text appears in Google search results AND when the page is shared on social media (Facebook, WhatsApp, LinkedIn). Update whenever page content changes significantly." }
           - label: "Images"
             name: "images"
             widget: "object"
@@ -465,8 +465,8 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Subtitle", name: "subtitle", widget: "text" }
-              - { label: "CTA text", name: "ctaText", widget: "string" }
-              - { label: "CTA link", name: "ctaHref", widget: "string" }
+              - { label: "Action button text (CTA button)", name: "ctaText", widget: "string", hint: "Important! This is the button on the hero image that guides visitors to take action (e.g. Book a lesson). Short and clear text works best." }
+              - { label: "Action button link (CTA button)", name: "ctaHref", widget: "string", hint: "Where the button leads (e.g. booking URL or #pricing)." }
           - label: "Video links"
             name: "videoLinks"
             widget: "list"
@@ -495,7 +495,7 @@ collections:
         label: "Hinnat-sivu (FI)"
         file: "src/data/hinnat-fi.json"
         fields:
-          - { label: "SEO-kuvaus (Google-hakutuloksissa)", name: "seoDescription", widget: "text", hint: "Max 160 merkkiä. Näkyy hakukoneissa sivun otsikon alla." }
+          - { label: "SEO-kuvaus (Google & some)", name: "seoDescription", widget: "text", hint: "Max 160 merkkiä. Tämä teksti näkyy Google-hakutuloksissa otsikon alla JA kun sivua jaetaan somessa (Facebook, WhatsApp, LinkedIn). Päivitä aina kun sivun sisältö muuttuu olennaisesti." }
           - label: "Kuvat"
             name: "images"
             widget: "object"
@@ -507,8 +507,8 @@ collections:
             fields:
               - { label: "Otsikko", name: "title", widget: "string" }
               - { label: "Alaotsikko", name: "subtitle", widget: "string" }
-              - { label: "CTA-teksti", name: "ctaText", widget: "string" }
-              - { label: "CTA-linkki", name: "ctaHref", widget: "string" }
+              - { label: "Toimintakehotteen teksti (CTA-nappi)", name: "ctaText", widget: "string", hint: "Tärkeä! Tämä on hero-kuvan päällä oleva nappi, joka ohjaa kävijän toimintaan (esim. Varaa tunti). Lyhyt ja selkeä teksti toimii parhaiten." }
+              - { label: "Toimintakehotteen linkki (CTA-nappi)", name: "ctaHref", widget: "string", hint: "Mihin osoitteeseen nappi vie (esim. ajanvaraus-URL tai #hinnasto)." }
           - label: "Varaus"
             name: "booking"
             widget: "object"
@@ -545,7 +545,7 @@ collections:
         label: "Pricing page (EN)"
         file: "src/data/hinnat-en.json"
         fields:
-          - { label: "SEO description (shown in Google results)", name: "seoDescription", widget: "text", hint: "Max 160 characters. Shown below page title in search results." }
+          - { label: "SEO description (Google & social media)", name: "seoDescription", widget: "text", hint: "Max 160 characters. This text appears in Google search results AND when the page is shared on social media (Facebook, WhatsApp, LinkedIn). Update whenever page content changes significantly." }
           - label: "Images"
             name: "images"
             widget: "object"
@@ -557,8 +557,8 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Subtitle", name: "subtitle", widget: "string" }
-              - { label: "CTA text", name: "ctaText", widget: "string" }
-              - { label: "CTA link", name: "ctaHref", widget: "string" }
+              - { label: "Action button text (CTA button)", name: "ctaText", widget: "string", hint: "Important! This is the button on the hero image that guides visitors to take action (e.g. Book a lesson). Short and clear text works best." }
+              - { label: "Action button link (CTA button)", name: "ctaHref", widget: "string", hint: "Where the button leads (e.g. booking URL or #pricing)." }
           - label: "Booking"
             name: "booking"
             widget: "object"
@@ -602,7 +602,7 @@ collections:
         label: "Blogisivu (FI)"
         file: "src/data/blogi-fi.json"
         fields:
-          - { label: "SEO-kuvaus (Google-hakutuloksissa)", name: "seoDescription", widget: "text", hint: "Max 160 merkkiä. Näkyy hakukoneissa sivun otsikon alla." }
+          - { label: "SEO-kuvaus (Google & some)", name: "seoDescription", widget: "text", hint: "Max 160 merkkiä. Tämä teksti näkyy Google-hakutuloksissa otsikon alla JA kun sivua jaetaan somessa (Facebook, WhatsApp, LinkedIn). Päivitä aina kun sivun sisältö muuttuu olennaisesti." }
           - label: "Hero"
             name: "hero"
             widget: "object"
@@ -615,7 +615,7 @@ collections:
         label: "Blog page (EN)"
         file: "src/data/blogi-en.json"
         fields:
-          - { label: "SEO description (shown in Google results)", name: "seoDescription", widget: "text", hint: "Max 160 characters. Shown below page title in search results." }
+          - { label: "SEO description (Google & social media)", name: "seoDescription", widget: "text", hint: "Max 160 characters. This text appears in Google search results AND when the page is shared on social media (Facebook, WhatsApp, LinkedIn). Update whenever page content changes significantly." }
           - label: "Hero"
             name: "hero"
             widget: "object"
