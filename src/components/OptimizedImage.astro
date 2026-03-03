@@ -18,11 +18,11 @@ interface Props {
 
 const { src, alt, class: className, loading = "lazy", ...rest } = Astro.props;
 
-// Derive WebP path: /images/photo.jpg → /images/photo.webp
+// Derive WebP path: /images/photo.jpg → /images/webp/photo.webp
 const isAlreadyWebp = src.endsWith(".webp");
 const webpSrc = isAlreadyWebp
   ? null
-  : src.replace(/\.(jpe?g|png)$/i, ".webp");
+  : src.replace(/^\/images\/(.+)\.(jpe?g|png)$/i, "/images/webp/$1.webp");
 
 // Detect MIME type for the original
 const mimeType = src.endsWith(".png")

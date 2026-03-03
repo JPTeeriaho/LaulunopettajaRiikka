@@ -13,10 +13,11 @@
  */
 
 import sharp from "sharp";
-import { readdirSync, statSync, existsSync, writeFileSync, readFileSync, unlinkSync } from "fs";
+import { readdirSync, statSync, existsSync, writeFileSync, readFileSync, unlinkSync, mkdirSync } from "fs";
 import { join, extname, basename } from "path";
 
 const IMAGE_DIR = "public/images";
+const WEBP_DIR = join(IMAGE_DIR, "webp");
 const MAX_WIDTH = 2000;
 const JPEG_QUALITY = 80;
 const WEBP_QUALITY = 80;
@@ -71,9 +72,10 @@ async function optimizeImage(filePath) {
   // Write optimized file
   writeFileSync(filePath, buffer);
 
-  // Also create .webp version if not already webp
+  // Also create .webp version in webp/ subfolder (keeps CMS media clean)
   if (ext !== ".webp") {
-    const webpPath = filePath.replace(/\.[^.]+$/, ".webp");
+    mkdirSync(WEBP_DIR, { recursive: true });
+    const webpPath = join(WEBP_DIR, basename(filePath).replace(/\.[^.]+$/, ".webp"));
     const webpBuffer = await sharp(buffer)
       .resize({ width: MAX_WIDTH, withoutEnlargement: true })
       .webp({ quality: WEBP_QUALITY })
@@ -106,23 +108,23 @@ async function compressImage(filePath, ext, quality, needsResize) {
 }
 
 async function main() {
-  // 1. Clean up orphaned .webp files (source image was deleted)
+  // 1. Clean up orphaned .webp files in webp/ subfolder (source image was deleted)
   const allFiles = existsSync(IMAGE_DIR) ? readdirSync(IMAGE_DIR) : [];
   const originals = new Set(
     allFiles
       .filter((f) => !f.startsWith(".") && extname(f).toLowerCase() !== ".webp")
       .map((f) => f.replace(/\.[^.]+$/, ""))
   );
-  const webpFiles = allFiles.filter(
-    (f) => extname(f).toLowerCase() === ".webp" && !f.startsWith(".")
-  );
+  const webpFiles = existsSync(WEBP_DIR)
+    ? readdirSync(WEBP_DIR).filter((f) => extname(f).toLowerCase() === ".webp" && !f.startsWith("."))
+    : [];
   let removed = 0;
   for (const wf of webpFiles) {
     const stem = wf.replace(/\.webp$/i, "");
     if (!originals.has(stem)) {
-      const wPath = join(IMAGE_DIR, wf);
+      const wPath = join(WEBP_DIR, wf);
       unlinkSync(wPath);
-      console.log(`  🗑️  ${wf} poistettu (alkuperäiskuva puuttuu)`);
+      console.log(`  🗑️  webp/${wf} poistettu (alkuperäiskuva puuttuu)`);
       // Also remove from marker
       const marker = loadMarker();
       delete marker[wf];
