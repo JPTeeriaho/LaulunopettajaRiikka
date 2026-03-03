@@ -16,7 +16,7 @@ const { post } = Astro.props;
 const { Content } = await post.render();
 ---
 
-<BaseLayout title={`${post.data.title} — Riikka Vuorijärvi`}>
+<BaseLayout title={`${post.data.title} — Riikka Vuorijärvi`} description={post.data.excerpt || post.data.title} lang="fi" ogImage={post.data.image}>
   <Nav currentPage="blogi" />
 
   <!-- Hero -->

@@ -5,20 +5,39 @@ import settings from "../data/settings.json";
 interface Props {
   title: string;
   description?: string;
+  lang?: "fi" | "en";
+  ogImage?: string;
+  /** Alternate language page path, e.g. "/en/pricing" from "/hinnat" */
+  alternateLang?: string;
 }
 
-const { title, description = "Riikka Vuorijärvi — Laulunopettaja & Musiikkipedagogi, Oulu" } = Astro.props;
+const {
+  title,
+  description = "Riikka Vuorijärvi — Laulunopettaja & Musiikkipedagogi, Oulu",
+  lang = "fi",
+  ogImage = "/images/riikka-hero.jpg",
+  alternateLang,
+} = Astro.props;
+
 const gaId = settings.googleAnalyticsId;
+const siteUrl = "https://curious-shortbread-45a21e.netlify.app";
+const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
+const ogImageUrl = new URL(ogImage, siteUrl).href;
+const altLang = lang === "fi" ? "en" : "fi";
+const altUrl = alternateLang ? new URL(alternateLang, siteUrl).href : undefined;
 ---
 
 <!doctype html>
-<html lang="fi">
+<html lang={lang}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
+    <link rel="canonical" href={canonicalUrl} />
+    {altUrl && <link rel="alternate" hreflang={altLang} href={altUrl} />}
+    <link rel="alternate" hreflang={lang} href={canonicalUrl} />
     <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
@@ -29,6 +48,45 @@ const gaId = settings.googleAnalyticsId;
     />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content={lang === "fi" ? "fi_FI" : "en_US"} />
+    {altUrl && <meta property="og:locale:alternate" content={altLang === "fi" ? "fi_FI" : "en_US"} />}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Riikka Vuorijärvi — Laulunopettaja",
+      "description": lang === "fi"
+        ? "Laulunopettaja ja musiikkipedagogi Oulussa. Laulutunnit, äänivalmennukset ja äänenkäytön kehittäminen."
+        : "Vocal coach and music pedagogue in Oulu, Finland. Singing lessons, vocal coaching and voice development.",
+      "url": siteUrl,
+      "image": ogImageUrl,
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Oulu",
+        "addressCountry": "FI"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 65.0121,
+        "longitude": 25.4651
+      },
+      "priceRange": "€€",
+      "inLanguage": [lang],
+      "sameAs": []
+    })} />
+
     {gaId && (
       <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
     )}
