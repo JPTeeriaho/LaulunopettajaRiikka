@@ -6,23 +6,6 @@ import Footer from "../../components/Footer.astro";
 import { getCollection } from "astro:content";
 import pageData from "../../data/sinulle-en.json";
 
-import heroImg from "../../assets/images/ester-pyykosjarvi.jpeg";
-import eilaImg from "../../assets/images/eila-estradilla.jpg";
-import toivoKalleImg from "../../assets/images/toivo-ja-kalle.jpeg";
-import hannuImg from "../../assets/images/hannu-lavalla.jpeg";
-import kalleImg from "../../assets/images/kalle-elaytyy.jpeg";
-import vaaleanpunaaImg from "../../assets/images/vaaleanpunaa.jpeg";
-import potrettiImg from "../../assets/images/riikka-potretti.jpeg";
-import mansikkaImg from "../../assets/images/mansikkasanko.jpeg";
-
-const imageMap: Record<string, ImageMetadata> = {
-  "eila-estradilla.jpg": eilaImg,
-  "toivo-ja-kalle.jpeg": toivoKalleImg,
-  "hannu-lavalla.jpeg": hannuImg,
-  "kalle-elaytyy.jpeg": kalleImg,
-  "vaaleanpunaa.jpeg": vaaleanpunaaImg,
-};
-
 const services = (await getCollection("services", ({ data }) => data.lang === "en"))
   .sort((a, b) => a.data.order - b.data.order);
 ---
@@ -37,7 +20,7 @@ const services = (await getCollection("services", ({ data }) => data.lang === "e
     ctaText={pageData.hero.ctaText}
     ctaHref={pageData.hero.ctaHref}
     height="h-[50vh]"
-    backgroundImage={heroImg.src}
+    backgroundImage={pageData.images.hero}
   />
 
   <!-- Services Grid -->
@@ -55,7 +38,7 @@ const services = (await getCollection("services", ({ data }) => data.lang === "e
           <div class="flex flex-col gap-5 p-6 rounded-xl bg-white border border-primary/5 hover:border-primary/20 transition-all shadow-sm hover:shadow-md group">
             <div class="w-full aspect-video rounded-lg overflow-hidden">
               <img
-                src={imageMap[service.data.image]?.src}
+                src={service.data.image}
                 alt={service.data.title}
                 class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
               />
@@ -80,14 +63,14 @@ const services = (await getCollection("services", ({ data }) => data.lang === "e
       <div class="lg:w-1/2 flex gap-4">
         <div class="w-1/2 aspect-[4/5] rounded-2xl rotate-[-2deg] shadow-xl overflow-hidden">
           <img
-            src={potrettiImg.src}
+            src={pageData.images.whyRiikka1}
             alt="Riikka Vuorijärvi"
             class="w-full h-full object-cover"
           />
         </div>
         <div class="w-1/2 aspect-[4/5] rounded-2xl rotate-[2deg] shadow-xl mt-8 overflow-hidden">
           <img
-            src={mansikkaImg.src}
+            src={pageData.images.whyRiikka2}
             alt="Strawberry basket"
             class="w-full h-full object-cover"
           />

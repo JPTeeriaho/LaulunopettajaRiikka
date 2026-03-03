@@ -7,10 +7,6 @@ import Footer from "../components/Footer.astro";
 import { getCollection } from "astro:content";
 import pageData from "../data/palautteet-fi.json";
 
-import heroImg from "../assets/images/kolme-laulavaa-naista.jpg";
-import sauliImg from "../assets/images/sauli.jpeg";
-import kukkaImg from "../assets/images/kukkakimara.jpeg";
-
 const longTestimonials = (await getCollection("testimonials", ({ data }) => data.lang === "fi" && data.type === "long"))
   .sort((a, b) => a.data.order - b.data.order);
 
@@ -28,7 +24,7 @@ const improTestimonials = (await getCollection("testimonials", ({ data }) => dat
     ctaText={pageData.hero.ctaText}
     ctaHref={pageData.hero.ctaHref}
     height="h-[60vh]"
-    backgroundImage={heroImg.src}
+    backgroundImage={pageData.images.hero}
   />
 
   <!-- Video links -->
@@ -62,11 +58,11 @@ const improTestimonials = (await getCollection("testimonials", ({ data }) => dat
     <!-- Decorative images -->
     <div class="flex justify-center gap-6 mb-16">
       <div class="w-32 h-32 rounded-full overflow-hidden shadow-lg hidden md:block">
-        <img src={sauliImg.src} alt="Sauli" class="w-full h-full object-cover" />
+        <img src={pageData.images.decorative1} alt="Sauli" class="w-full h-full object-cover" />
       </div>
       <div class="w-32 h-32 rounded-full overflow-hidden shadow-lg hidden md:block">
         <img
-          src={kukkaImg.src}
+          src={pageData.images.decorative2}
           alt="Kukkakimppu"
           class="w-full h-full object-cover"
         />

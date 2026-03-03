@@ -5,7 +5,7 @@ interface Props {
 
 const { lang = "fi" } = Astro.props;
 
-import lilithLogo from "../assets/images/lilith-logo.jpg";
+import settings from "../data/settings.json";
 
 const isEn = lang === "en";
 const prefix = isEn ? "/en" : "";
@@ -18,7 +18,7 @@ const prefix = isEn ? "/en" : "";
     <div class="space-y-6">
       <a href={prefix || "/"} class="flex items-center gap-3 no-underline">
         <img
-          src={lilithLogo.src}
+          src={settings.logo}
           alt="Lilith Osuuskunta"
           class="h-10 w-auto rounded"
         />

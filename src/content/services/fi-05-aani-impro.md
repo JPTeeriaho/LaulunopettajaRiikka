@@ -1,6 +1,6 @@
 ---
 title: "Leiki äänelläsi!"
-image: "kalle-elaytyy.jpeg"
+image: "/images/kalle-elaytyy.jpeg"
 lang: fi
 order: 5
 ---

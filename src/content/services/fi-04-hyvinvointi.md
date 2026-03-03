@@ -1,6 +1,6 @@
 ---
 title: "Hyvinvointia äänestä"
-image: "vaaleanpunaa.jpeg"
+image: "/images/vaaleanpunaa.jpeg"
 lang: fi
 order: 4
 ---

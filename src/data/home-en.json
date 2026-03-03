@@ -1,4 +1,9 @@
 {
+  "images": {
+    "hero": "/images/37hero.jpg",
+    "introImg1": "/images/eila-estradilla.jpg",
+    "introImg2": "/images/toivo-ja-kalle.jpeg"
+  },
   "hero": {
     "title": "Walking alongside your voice",
     "subtitle": "Find your voice. Gently.",

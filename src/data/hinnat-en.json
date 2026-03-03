@@ -1,4 +1,7 @@
 {
+  "images": {
+    "hero": "/images/riikka-vintilla.jpeg"
+  },
   "hero": {
     "title": "Pricing & Contact",
     "subtitle": "",

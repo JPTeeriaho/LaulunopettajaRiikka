@@ -1,6 +1,6 @@
 ---
 title: "Voice Impro — Play with your voice!"
-image: "kalle-elaytyy.jpeg"
+image: "/images/kalle-elaytyy.jpeg"
 lang: en
 order: 5
 ---

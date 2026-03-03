@@ -1,4 +1,9 @@
 {
+  "images": {
+    "hero": "/images/kolme-laulavaa-naista.jpg",
+    "decorative1": "/images/sauli.jpeg",
+    "decorative2": "/images/kukkakimara.jpeg"
+  },
   "hero": {
     "title": "Testimonials",
     "subtitle": "Experiences and stories from shared moments in singing, voice work and music.",

@@ -1,6 +1,6 @@
 ---
 title: "Laulutaidoton?"
-image: "toivo-ja-kalle.jpeg"
+image: "/images/toivo-ja-kalle.jpeg"
 lang: fi
 order: 2
 ---

@@ -5,10 +5,6 @@ import Hero from "../components/Hero.astro";
 import TestimonialCard from "../components/TestimonialCard.astro";
 import Footer from "../components/Footer.astro";
 import pageData from "../data/home-fi.json";
-
-import heroImg from "../assets/images/37hero.jpg";
-import eilaImg from "../assets/images/eila-estradilla.jpg";
-import toivoKalleImg from "../assets/images/toivo-ja-kalle.jpeg";
 ---
 
 <BaseLayout title="Riikka Vuorijärvi | Äänesi rinnallakulkija">
@@ -20,7 +16,7 @@ import toivoKalleImg from "../assets/images/toivo-ja-kalle.jpeg";
     subtitle={pageData.hero.subtitle}
     ctaText={pageData.hero.ctaText}
     ctaHref={pageData.hero.ctaHref}
-    backgroundImage={heroImg.src}
+    backgroundImage={pageData.images.hero}
     bgPosition="bg-[20%_top] md:bg-top"
   />
 
@@ -58,7 +54,7 @@ import toivoKalleImg from "../assets/images/toivo-ja-kalle.jpeg";
             <img
               alt="Eila estradilla"
               class="w-full h-full object-cover object-top"
-              src={eilaImg.src}
+              src={pageData.images.introImg1}
             />
           </div>
           <div
@@ -80,7 +76,7 @@ import toivoKalleImg from "../assets/images/toivo-ja-kalle.jpeg";
             <img
               alt="Toivo ja Kalle"
               class="w-full h-full object-cover"
-              src={toivoKalleImg.src}
+              src={pageData.images.introImg2}
             />
           </div>
         </div>

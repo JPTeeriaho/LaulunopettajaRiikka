@@ -6,7 +6,7 @@ interface Props {
 
 const { currentPage = "", lang = "fi" } = Astro.props;
 
-import lilithLogo from "../assets/images/lilith-logo.jpg";
+import settings from "../data/settings.json";
 
 const navLinksFi = [
   { href: "/", label: "Koti", id: "koti" },
@@ -34,7 +34,7 @@ const navLinks = lang === "en" ? navLinksEn : navLinksFi;
 >
   <a href={lang === "en" ? "/en" : "/"} class="flex items-center gap-3 min-[1920px]:gap-5 no-underline">
     <img
-      src={lilithLogo.src}
+      src={settings.logo}
       alt="Lilith Osuuskunta"
       class="h-10 xl:h-12 2xl:h-14 min-[1920px]:h-20 w-auto rounded"
     />

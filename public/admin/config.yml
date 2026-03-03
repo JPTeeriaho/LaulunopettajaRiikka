@@ -61,7 +61,7 @@ collections:
     extension: "md"
     fields:
       - { label: "Otsikko", name: "title", widget: "string" }
-      - { label: "Kuvatiedosto", name: "image", widget: "string", hint: "Tiedostonimi, esim. eila-estradilla.jpg" }
+      - { label: "Kuvatiedosto", name: "image", widget: "image", hint: "Valitse kuva palvelulle" }
       - { label: "Kieli", name: "lang", widget: "select", options: ["fi", "en"], default: "fi" }
       - { label: "Järjestys", name: "order", widget: "number" }
       - { label: "Kuvaus", name: "body", widget: "text" }
@@ -123,6 +123,13 @@ collections:
         label: "Etusivu (FI)"
         file: "src/data/home-fi.json"
         fields:
+          - label: "Kuvat"
+            name: "images"
+            widget: "object"
+            fields:
+              - { label: "Hero-taustakuva", name: "hero", widget: "image" }
+              - { label: "Esittelykuva 1", name: "introImg1", widget: "image" }
+              - { label: "Esittelykuva 2", name: "introImg2", widget: "image" }
           - label: "Hero"
             name: "hero"
             widget: "object"
@@ -160,6 +167,13 @@ collections:
         label: "Home (EN)"
         file: "src/data/home-en.json"
         fields:
+          - label: "Images"
+            name: "images"
+            widget: "object"
+            fields:
+              - { label: "Hero background", name: "hero", widget: "image" }
+              - { label: "Intro image 1", name: "introImg1", widget: "image" }
+              - { label: "Intro image 2", name: "introImg2", widget: "image" }
           - label: "Hero"
             name: "hero"
             widget: "object"
@@ -325,6 +339,13 @@ collections:
         label: "Sinulle (FI)"
         file: "src/data/sinulle-fi.json"
         fields:
+          - label: "Kuvat"
+            name: "images"
+            widget: "object"
+            fields:
+              - { label: "Hero-taustakuva", name: "hero", widget: "image" }
+              - { label: "Miksi Riikka -kuva 1", name: "whyRiikka1", widget: "image" }
+              - { label: "Miksi Riikka -kuva 2", name: "whyRiikka2", widget: "image" }
           - label: "Hero"
             name: "hero"
             widget: "object"
@@ -349,6 +370,13 @@ collections:
         label: "For You (EN)"
         file: "src/data/sinulle-en.json"
         fields:
+          - label: "Images"
+            name: "images"
+            widget: "object"
+            fields:
+              - { label: "Hero background", name: "hero", widget: "image" }
+              - { label: "Why Riikka image 1", name: "whyRiikka1", widget: "image" }
+              - { label: "Why Riikka image 2", name: "whyRiikka2", widget: "image" }
           - label: "Hero"
             name: "hero"
             widget: "object"
@@ -380,6 +408,13 @@ collections:
         label: "Palautesivu (FI)"
         file: "src/data/palautteet-fi.json"
         fields:
+          - label: "Kuvat"
+            name: "images"
+            widget: "object"
+            fields:
+              - { label: "Hero-taustakuva", name: "hero", widget: "image" }
+              - { label: "Koristekuva 1", name: "decorative1", widget: "image" }
+              - { label: "Koristekuva 2", name: "decorative2", widget: "image" }
           - label: "Hero"
             name: "hero"
             widget: "object"
@@ -409,6 +444,13 @@ collections:
         label: "Testimonials page (EN)"
         file: "src/data/palautteet-en.json"
         fields:
+          - label: "Images"
+            name: "images"
+            widget: "object"
+            fields:
+              - { label: "Hero background", name: "hero", widget: "image" }
+              - { label: "Decorative image 1", name: "decorative1", widget: "image" }
+              - { label: "Decorative image 2", name: "decorative2", widget: "image" }
           - label: "Hero"
             name: "hero"
             widget: "object"
@@ -445,6 +487,11 @@ collections:
         label: "Hinnat-sivu (FI)"
         file: "src/data/hinnat-fi.json"
         fields:
+          - label: "Kuvat"
+            name: "images"
+            widget: "object"
+            fields:
+              - { label: "Hero-taustakuva", name: "hero", widget: "image" }
           - label: "Hero"
             name: "hero"
             widget: "object"
@@ -489,6 +536,11 @@ collections:
         label: "Pricing page (EN)"
         file: "src/data/hinnat-en.json"
         fields:
+          - label: "Images"
+            name: "images"
+            widget: "object"
+            fields:
+              - { label: "Hero background", name: "hero", widget: "image" }
           - label: "Hero"
             name: "hero"
             widget: "object"
@@ -579,10 +631,11 @@ collections:
               - { label: "Facebook", name: "facebook", widget: "string" }
               - { label: "YouTube", name: "youtube", widget: "string" }
       - name: "analytics"
-        label: "Google Analytics"
+        label: "Google Analytics & Logo"
         file: "src/data/settings.json"
         fields:
           - { label: "Google Analytics Measurement ID (esim. G-XXXXXXXXXX)", name: "googleAnalyticsId", widget: "string", required: false, hint: "Jätä tyhjäksi jos et halua seurantaa. Löytyy Google Analytics → Admin → Data Streams." }
+          - { label: "Logo", name: "logo", widget: "image", hint: "Sivuston logo (näkyy navigaatiossa ja footerissa)" }
       - name: "maps"
         label: "Kartta-upotus"
         file: "src/data/maps-embed.json"

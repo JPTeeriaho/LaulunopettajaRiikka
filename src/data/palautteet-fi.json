@@ -1,4 +1,9 @@
 {
+  "images": {
+    "hero": "/images/kolme-laulavaa-naista.jpg",
+    "decorative1": "/images/sauli.jpeg",
+    "decorative2": "/images/kukkakimara.jpeg"
+  },
   "hero": {
     "title": "Palautteita",
     "subtitle": "Kokemuksia ja tarinoita yhteisistä hetkistä laulun, äänenkäytön ja musiikin parissa.",

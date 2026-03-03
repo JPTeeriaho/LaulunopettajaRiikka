@@ -1,6 +1,6 @@
 ---
 title: "Karaokea vai klassista?"
-image: "hannu-lavalla.jpeg"
+image: "/images/hannu-lavalla.jpeg"
 lang: fi
 order: 3
 ---

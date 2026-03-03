@@ -1,4 +1,9 @@
 {
+  "images": {
+    "hero": "/images/ester-pyykosjarvi.jpeg",
+    "whyRiikka1": "/images/riikka-potretti.jpeg",
+    "whyRiikka2": "/images/mansikkasanko.jpeg"
+  },
   "hero": {
     "title": "For You?",
     "subtitle": "Find your own path to voice, expression and wellbeing.",

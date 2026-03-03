@@ -6,8 +6,6 @@ import Footer from "../../components/Footer.astro";
 import pageData from "../../data/hinnat-en.json";
 import pricingData from "../../data/pricing-en.json";
 import mapsData from "../../data/maps-embed.json";
-
-import heroImg from "../../assets/images/riikka-vintilla.jpeg";
 ---
 
 <BaseLayout title="Pricing & Contact — Riikka Vuorijärvi">
@@ -20,11 +18,11 @@ import heroImg from "../../assets/images/riikka-vintilla.jpeg";
     ctaText={pageData.hero.ctaText}
     ctaHref={pageData.hero.ctaHref}
     height="h-[50vh]"
-    backgroundImage={heroImg.src}
+    backgroundImage={pageData.images.hero}
   />
 
   <div
-    class="max-w-[960px] w-full mx-auto px-4 md:px-0 flex flex-col gap-12 py-12"
+    class="max-w-[960px] min-[1920px]:max-w-[1200px] min-[2560px]:max-w-[1600px] w-full mx-auto px-4 md:px-6 flex flex-col gap-12 py-12"
   >
     <!-- Pricing Table -->
     <section class="flex flex-col gap-6" id="pricing">
@@ -83,7 +81,7 @@ import heroImg from "../../assets/images/riikka-vintilla.jpeg";
     <section
       class="rounded-xl border border-primary/20 bg-primary/5 p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6"
     >
-      <div class="flex flex-col gap-2 text-center md:text-left">
+      <div class="flex flex-col gap-2 text-center md:text-left md:max-w-[70%]">
         <h3 class="text-slate-900 text-xl font-bold">
           {pageData.booking.heading}
         </h3>

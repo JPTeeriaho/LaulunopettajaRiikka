@@ -1,6 +1,6 @@
 ---
 title: "Sing and speak with ease!"
-image: "eila-estradilla.jpg"
+image: "/images/eila-estradilla.jpg"
 lang: en
 order: 1
 ---

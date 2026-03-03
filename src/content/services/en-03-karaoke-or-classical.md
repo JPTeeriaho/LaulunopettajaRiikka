@@ -1,6 +1,6 @@
 ---
 title: "Sing karaoke or classical in style!"
-image: "hannu-lavalla.jpeg"
+image: "/images/hannu-lavalla.jpeg"
 lang: en
 order: 3
 ---
