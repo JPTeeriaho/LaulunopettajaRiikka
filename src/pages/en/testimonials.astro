@@ -4,6 +4,7 @@ import Nav from "../../components/Nav.astro";
 import Hero from "../../components/Hero.astro";
 import TestimonialCard from "../../components/TestimonialCard.astro";
 import Footer from "../../components/Footer.astro";
+import OptimizedImage from "../../components/OptimizedImage.astro";
 import { getCollection } from "astro:content";
 import pageData from "../../data/palautteet-en.json";
 
@@ -58,10 +59,10 @@ const improTestimonials = (await getCollection("testimonials", ({ data }) => dat
     <!-- Decorative images -->
     <div class="flex justify-center gap-6 mb-16">
       <div class="w-32 h-32 rounded-full overflow-hidden shadow-lg hidden md:block">
-        <img src={pageData.images.decorative1} alt="Sauli" class="w-full h-full object-cover" />
+        <OptimizedImage src={pageData.images.decorative1} alt="Sauli" class="w-full h-full object-cover" />
       </div>
       <div class="w-32 h-32 rounded-full overflow-hidden shadow-lg hidden md:block">
-        <img
+        <OptimizedImage
           src={pageData.images.decorative2}
           alt="Bouquet of flowers"
           class="w-full h-full object-cover"

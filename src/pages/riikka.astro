@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
+import OptimizedImage from "../components/OptimizedImage.astro";
 import pageData from "../data/riikka-fi.json";
 ---
 
@@ -10,11 +11,13 @@ import pageData from "../data/riikka-fi.json";
 
   <!-- Hero -->
   <section class="relative h-[60vh] min-h-[400px] w-full overflow-hidden">
-    <div
-      class="absolute inset-0 bg-cover bg-top bg-no-repeat"
-      style={`background-image: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.3)), url('${pageData.images.hero}');`}
-    >
-    </div>
+    <OptimizedImage
+      src={pageData.images.hero}
+      alt=""
+      class="absolute inset-0 w-full h-full object-cover object-top"
+      loading="eager"
+    />
+    <div class="absolute inset-0 bg-gradient-to-b from-[rgba(0,0,0,0.1)] to-[rgba(0,0,0,0.3)]"></div>
     <div
       class="relative h-full flex items-center justify-center text-center px-4"
     >
@@ -77,7 +80,7 @@ import pageData from "../data/riikka-fi.json";
       </div>
       <div class="grid grid-cols-2 gap-4">
         <div class="rounded-lg overflow-hidden h-64 shadow-lg">
-          <img
+          <OptimizedImage
             alt="Särkynyt sydän -taideteos"
             class="w-full h-full object-cover object-top"
             loading="lazy"
@@ -85,7 +88,7 @@ import pageData from "../data/riikka-fi.json";
           />
         </div>
         <div class="rounded-lg overflow-hidden h-64 shadow-lg mt-8">
-          <img
+          <OptimizedImage
             alt="Mansikkasanko"
             class="w-full h-full object-cover"
             loading="lazy"
@@ -93,7 +96,7 @@ import pageData from "../data/riikka-fi.json";
           />
         </div>
         <div class="col-span-2 rounded-xl overflow-hidden h-80 shadow-2xl shadow-primary/10 mt-4">
-          <img
+          <OptimizedImage
             alt="Riikka Vuorijärvi"
             class="w-full h-full object-cover object-top"
             loading="lazy"

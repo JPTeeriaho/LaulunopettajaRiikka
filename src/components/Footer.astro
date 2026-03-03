@@ -6,6 +6,7 @@ interface Props {
 const { lang = "fi" } = Astro.props;
 
 import settings from "../data/settings.json";
+import OptimizedImage from "./OptimizedImage.astro";
 
 const isEn = lang === "en";
 const prefix = isEn ? "/en" : "";
@@ -17,7 +18,7 @@ const prefix = isEn ? "/en" : "";
   <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
     <div class="space-y-6">
       <a href={prefix || "/"} class="flex items-center gap-3 no-underline">
-        <img
+        <OptimizedImage
           src={settings.logo}
           alt="Lilith Osuuskunta"
           class="h-10 w-auto rounded"

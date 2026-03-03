@@ -10,5 +10,19 @@
 <body>
   <!-- Include the script that builds the page and powers Decap CMS -->
   <script src="https://unpkg.com/decap-cms@^3.3.0/dist/decap-cms.js"></script>
+  <!-- Hide .webp files from media library (auto-generated, not for manual use) -->
+  <script>
+    (function() {
+      const observer = new MutationObserver(function() {
+        document.querySelectorAll('[class*="MediaLibraryCard"]').forEach(function(card) {
+          const text = card.textContent || card.innerText || '';
+          if (text.match(/\.webp$/i)) {
+            card.style.display = 'none';
+          }
+        });
+      });
+      observer.observe(document.body, { childList: true, subtree: true });
+    })();
+  </script>
 </body>
 </html>

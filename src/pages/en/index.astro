@@ -4,6 +4,7 @@ import Nav from "../../components/Nav.astro";
 import Hero from "../../components/Hero.astro";
 import TestimonialCard from "../../components/TestimonialCard.astro";
 import Footer from "../../components/Footer.astro";
+import OptimizedImage from "../../components/OptimizedImage.astro";
 import pageData from "../../data/home-en.json";
 ---
 
@@ -51,7 +52,7 @@ import pageData from "../../data/home-en.json";
           <div
             class="h-64 rounded-2xl overflow-hidden shadow-lg transform translate-y-8"
           >
-            <img
+            <OptimizedImage
               alt="Eila on stage"
               class="w-full h-full object-cover object-top"
               src={pageData.images.introImg1}
@@ -73,7 +74,7 @@ import pageData from "../../data/home-en.json";
             >
           </div>
           <div class="h-64 rounded-2xl overflow-hidden shadow-lg">
-            <img
+            <OptimizedImage
               alt="Toivo and Kalle"
               class="w-full h-full object-cover"
               src={pageData.images.introImg2}

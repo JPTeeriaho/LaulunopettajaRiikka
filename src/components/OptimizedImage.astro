@@ -1,0 +1,43 @@
+---
+/**
+ * OptimizedImage — serves WebP when available, falls back to original.
+ *
+ * Usage:
+ *   <OptimizedImage src="/images/photo.jpg" alt="Kuvaus" class="w-full" />
+ *
+ * The component automatically derives the .webp path from the original.
+ * If the original is already .webp, it renders a plain <img>.
+ */
+interface Props {
+  src: string;
+  alt: string;
+  class?: string;
+  loading?: "lazy" | "eager";
+  [key: string]: any;
+}
+
+const { src, alt, class: className, loading = "lazy", ...rest } = Astro.props;
+
+// Derive WebP path: /images/photo.jpg → /images/photo.webp
+const isAlreadyWebp = src.endsWith(".webp");
+const webpSrc = isAlreadyWebp
+  ? null
+  : src.replace(/\.(jpe?g|png)$/i, ".webp");
+
+// Detect MIME type for the original
+const mimeType = src.endsWith(".png")
+  ? "image/png"
+  : src.endsWith(".webp")
+    ? "image/webp"
+    : "image/jpeg";
+---
+
+{webpSrc ? (
+  <picture>
+    <source srcset={webpSrc} type="image/webp" />
+    <source srcset={src} type={mimeType} />
+    <img src={src} alt={alt} class={className} loading={loading} {...rest} />
+  </picture>
+) : (
+  <img src={src} alt={alt} class={className} loading={loading} {...rest} />
+)}

@@ -7,6 +7,7 @@ interface Props {
 const { currentPage = "", lang = "fi" } = Astro.props;
 
 import settings from "../data/settings.json";
+import OptimizedImage from "./OptimizedImage.astro";
 
 const navLinksFi = [
   { href: "/", label: "Koti", id: "koti" },
@@ -33,10 +34,11 @@ const navLinks = lang === "en" ? navLinksEn : navLinksFi;
   class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 px-6 md:px-20 py-4 bg-background-light/80 backdrop-blur-md sticky top-0 z-50"
 >
   <a href={lang === "en" ? "/en" : "/"} class="flex items-center gap-3 min-[1920px]:gap-5 no-underline">
-    <img
+    <OptimizedImage
       src={settings.logo}
       alt="Lilith Osuuskunta"
       class="h-10 xl:h-12 2xl:h-14 min-[1920px]:h-20 w-auto rounded"
+      loading="eager"
     />
     <div class="flex flex-col">
       <h2 class="text-slate-900 text-lg xl:text-xl 2xl:text-2xl min-[1920px]:text-4xl font-bold leading-tight tracking-tight">

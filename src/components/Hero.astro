@@ -1,4 +1,6 @@
 ---
+import OptimizedImage from "./OptimizedImage.astro";
+
 interface Props {
   title: string;
   subtitle?: string;
@@ -20,15 +22,23 @@ const {
   height = "h-[80vh]",
   bgPosition = "",
 } = Astro.props;
+
+// Map bg-position classes to object-position classes
+const objectPosition = bgPosition === "bg-center" ? "object-center" : bgPosition === "bg-bottom" ? "object-bottom" : "object-top";
 ---
 
 <section class={`relative ${height} w-full overflow-hidden`}>
   {
     backgroundImage && (
-      <div
-        class={`absolute inset-0 bg-cover ${bgPosition || 'bg-top'}`}
-        style={`background-image: linear-gradient(rgba(33, 21, 17, 0.4), rgba(33, 21, 17, 0.2)), url("${backgroundImage}");`}
-      />
+      <>
+        <OptimizedImage
+          src={backgroundImage}
+          alt=""
+          class={`absolute inset-0 w-full h-full object-cover ${objectPosition}`}
+          loading="eager"
+        />
+        <div class="absolute inset-0 bg-gradient-to-b from-[rgba(33,21,17,0.4)] to-[rgba(33,21,17,0.2)]" />
+      </>
     )
   }
   <div

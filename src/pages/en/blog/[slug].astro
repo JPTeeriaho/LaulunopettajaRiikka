@@ -2,6 +2,7 @@
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import Nav from "../../../components/Nav.astro";
 import Footer from "../../../components/Footer.astro";
+import OptimizedImage from "../../../components/OptimizedImage.astro";
 import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
@@ -22,10 +23,12 @@ const { Content } = await post.render();
   <!-- Hero -->
   <section class="relative w-full h-[50vh] flex items-end overflow-hidden">
     <div class="absolute inset-0 bg-gradient-to-t from-[#211511]/70 to-transparent z-10"></div>
-    <div
-      class="absolute inset-0 bg-center bg-cover scale-105"
-      style={`background-image: url('${post.data.image}');`}
-    ></div>
+    <OptimizedImage
+      src={post.data.image}
+      alt=""
+      class="absolute inset-0 w-full h-full object-cover object-center scale-105"
+      loading="eager"
+    />
     <div class="relative z-20 max-w-3xl mx-auto w-full px-6 md:px-10 pb-16">
       <span class="inline-block text-primary bg-white/90 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4">
         {post.data.category}

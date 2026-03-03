@@ -13,7 +13,7 @@
  */
 
 import sharp from "sharp";
-import { readdirSync, statSync, existsSync, writeFileSync, readFileSync } from "fs";
+import { readdirSync, statSync, existsSync, writeFileSync, readFileSync, unlinkSync } from "fs";
 import { join, extname, basename } from "path";
 
 const IMAGE_DIR = "public/images";
@@ -106,6 +106,35 @@ async function compressImage(filePath, ext, quality, needsResize) {
 }
 
 async function main() {
+  // 1. Clean up orphaned .webp files (source image was deleted)
+  const allFiles = existsSync(IMAGE_DIR) ? readdirSync(IMAGE_DIR) : [];
+  const originals = new Set(
+    allFiles
+      .filter((f) => !f.startsWith(".") && extname(f).toLowerCase() !== ".webp")
+      .map((f) => f.replace(/\.[^.]+$/, ""))
+  );
+  const webpFiles = allFiles.filter(
+    (f) => extname(f).toLowerCase() === ".webp" && !f.startsWith(".")
+  );
+  let removed = 0;
+  for (const wf of webpFiles) {
+    const stem = wf.replace(/\.webp$/i, "");
+    if (!originals.has(stem)) {
+      const wPath = join(IMAGE_DIR, wf);
+      unlinkSync(wPath);
+      console.log(`  🗑️  ${wf} poistettu (alkuperäiskuva puuttuu)`);
+      // Also remove from marker
+      const marker = loadMarker();
+      delete marker[wf];
+      saveMarker(marker);
+      removed++;
+    }
+  }
+  if (removed > 0) {
+    console.log(`\n🧹 Siivottu ${removed} orpoa .webp-tiedostoa.`);
+  }
+
+  // 2. Optimize images
   const files = getImageFiles(IMAGE_DIR);
   if (files.length === 0) {
     console.log("📷 No images to optimize.");
