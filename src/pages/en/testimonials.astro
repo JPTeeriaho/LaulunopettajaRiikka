@@ -14,7 +14,7 @@ const improTestimonials = (await getCollection("testimonials", ({ data }) => dat
   .sort((a, b) => a.data.order - b.data.order);
 ---
 
-<BaseLayout title="Testimonials — Riikka Vuorijärvi" description="Student experiences and testimonials from Riikka Vuorijärvi's singing lessons and vocal coaching sessions." lang="en" alternateLang="/palautteet/">
+<BaseLayout title="Testimonials — Riikka Vuorijärvi" description={pageData.seoDescription} lang="en" alternateLang="/palautteet/">
   <Nav currentPage="palautteet" lang="en" />
 
   <!-- Hero -->

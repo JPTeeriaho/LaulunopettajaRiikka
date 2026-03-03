@@ -10,7 +10,7 @@ const services = (await getCollection("services", ({ data }) => data.lang === "f
   .sort((a, b) => a.data.order - b.data.order);
 ---
 
-<BaseLayout title="Sinulle? — Riikka Vuorijärvi" description="Kenelle laulutunnit sopivat? Löydä itsellesi sopiva palvelu: yksilölaulutunnit, äänenhuolto, äänivalmennukset ja workshop-ryhmät." lang="fi" alternateLang="/en/for-you/">
+<BaseLayout title="Sinulle? — Riikka Vuorijärvi" description={pageData.seoDescription} lang="fi" alternateLang="/en/for-you/">
   <Nav currentPage="sinulle" />
 
   <!-- Hero -->

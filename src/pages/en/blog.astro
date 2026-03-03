@@ -9,7 +9,7 @@ const posts = (await getCollection("blog", ({ data }) => data.lang === "en"))
   .sort((a, b) => (a.data.order ?? 0) - (b.data.order ?? 0));
 ---
 
-<BaseLayout title="Blog — Riikka Vuorijärvi" description="Articles about voice, singing and vocal development. Blog by vocal coach Riikka Vuorijärvi." lang="en" alternateLang="/blogi/">
+<BaseLayout title="Blog — Riikka Vuorijärvi" description={blogData.seoDescription} lang="en" alternateLang="/blogi/">
   <Nav currentPage="blogi" lang="en" />
 
   <!-- Hero -->

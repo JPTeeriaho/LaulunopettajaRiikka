@@ -123,6 +123,7 @@ collections:
         label: "Etusivu (FI)"
         file: "src/data/home-fi.json"
         fields:
+          - { label: "SEO-kuvaus (Google-hakutuloksissa)", name: "seoDescription", widget: "text", hint: "Max 160 merkkiä. Näkyy hakukoneissa sivun otsikon alla." }
           - label: "Kuvat"
             name: "images"
             widget: "object"
@@ -167,6 +168,7 @@ collections:
         label: "Home (EN)"
         file: "src/data/home-en.json"
         fields:
+          - { label: "SEO description (shown in Google results)", name: "seoDescription", widget: "text", hint: "Max 160 characters. Shown below page title in search results." }
           - label: "Images"
             name: "images"
             widget: "object"
@@ -218,6 +220,7 @@ collections:
         label: "Riikka (FI)"
         file: "src/data/riikka-fi.json"
         fields:
+          - { label: "SEO-kuvaus (Google-hakutuloksissa)", name: "seoDescription", widget: "text", hint: "Max 160 merkkiä. Näkyy hakukoneissa sivun otsikon alla." }
           - label: "Kuvat"
             name: "images"
             widget: "object"
@@ -275,6 +278,7 @@ collections:
         label: "Riikka (EN)"
         file: "src/data/riikka-en.json"
         fields:
+          - { label: "SEO description (shown in Google results)", name: "seoDescription", widget: "text", hint: "Max 160 characters. Shown below page title in search results." }
           - label: "Images"
             name: "images"
             widget: "object"
@@ -339,6 +343,7 @@ collections:
         label: "Sinulle (FI)"
         file: "src/data/sinulle-fi.json"
         fields:
+          - { label: "SEO-kuvaus (Google-hakutuloksissa)", name: "seoDescription", widget: "text", hint: "Max 160 merkkiä. Näkyy hakukoneissa sivun otsikon alla." }
           - label: "Kuvat"
             name: "images"
             widget: "object"
@@ -370,6 +375,7 @@ collections:
         label: "For You (EN)"
         file: "src/data/sinulle-en.json"
         fields:
+          - { label: "SEO description (shown in Google results)", name: "seoDescription", widget: "text", hint: "Max 160 characters. Shown below page title in search results." }
           - label: "Images"
             name: "images"
             widget: "object"
@@ -408,6 +414,7 @@ collections:
         label: "Palautesivu (FI)"
         file: "src/data/palautteet-fi.json"
         fields:
+          - { label: "SEO-kuvaus (Google-hakutuloksissa)", name: "seoDescription", widget: "text", hint: "Max 160 merkkiä. Näkyy hakukoneissa sivun otsikon alla." }
           - label: "Kuvat"
             name: "images"
             widget: "object"
@@ -444,6 +451,7 @@ collections:
         label: "Testimonials page (EN)"
         file: "src/data/palautteet-en.json"
         fields:
+          - { label: "SEO description (shown in Google results)", name: "seoDescription", widget: "text", hint: "Max 160 characters. Shown below page title in search results." }
           - label: "Images"
             name: "images"
             widget: "object"
@@ -487,6 +495,7 @@ collections:
         label: "Hinnat-sivu (FI)"
         file: "src/data/hinnat-fi.json"
         fields:
+          - { label: "SEO-kuvaus (Google-hakutuloksissa)", name: "seoDescription", widget: "text", hint: "Max 160 merkkiä. Näkyy hakukoneissa sivun otsikon alla." }
           - label: "Kuvat"
             name: "images"
             widget: "object"
@@ -536,6 +545,7 @@ collections:
         label: "Pricing page (EN)"
         file: "src/data/hinnat-en.json"
         fields:
+          - { label: "SEO description (shown in Google results)", name: "seoDescription", widget: "text", hint: "Max 160 characters. Shown below page title in search results." }
           - label: "Images"
             name: "images"
             widget: "object"
@@ -592,6 +602,7 @@ collections:
         label: "Blogisivu (FI)"
         file: "src/data/blogi-fi.json"
         fields:
+          - { label: "SEO-kuvaus (Google-hakutuloksissa)", name: "seoDescription", widget: "text", hint: "Max 160 merkkiä. Näkyy hakukoneissa sivun otsikon alla." }
           - label: "Hero"
             name: "hero"
             widget: "object"
@@ -604,6 +615,7 @@ collections:
         label: "Blog page (EN)"
         file: "src/data/blogi-en.json"
         fields:
+          - { label: "SEO description (shown in Google results)", name: "seoDescription", widget: "text", hint: "Max 160 characters. Shown below page title in search results." }
           - label: "Hero"
             name: "hero"
             widget: "object"
