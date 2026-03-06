@@ -1,5 +1,5 @@
 {
-  "seoDescription": "Tutustu Riikka Vuorijärveen: laulunopettaja, musiikkipedagogi ja äänivalmentaja Oulusta. Koulutus, kokemus ja intohimo ääneen.",
+  "seoDescription": "Kehollinen ja hermostollinen näkökulma laulamiseen.",
   "images": {
     "hero": "/images/kallionsylissa.jpeg",
     "profile": "/images/riikka-potretti.jpeg",
@@ -45,7 +45,13 @@
   "cta": {
     "heading": "Valmis löytämään äänesi?",
     "text": "Kaikentasoiset ja -ikäiset harrastajat ja ammattilaiset ovat tervetulleita, musiikin tyylilajiin katsomatta.",
-    "primaryButton": { "text": "Varaa tunti", "href": "https://pro.vello.fi/laulustudioriikka-ajanvaraus/" },
-    "secondaryButton": { "text": "Tutustu palveluihin", "href": "/sinulle" }
+    "primaryButton": {
+      "text": "Varaa tunti",
+      "href": "https://pro.vello.fi/laulustudioriikka-ajanvaraus/"
+    },
+    "secondaryButton": {
+      "text": "Tutustu palveluihin",
+      "href": "/sinulle"
+    }
   }
 }
