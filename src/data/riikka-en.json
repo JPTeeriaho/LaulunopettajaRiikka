@@ -1,5 +1,5 @@
 {
-  "seoDescription": "Meet Riikka Vuorijärvi: vocal coach, music educator and voice specialist from Oulu, Finland. Education, experience and passion for voice.",
+  "seoDescription": "Somatic and nervous system based approach to vocal pedagogy.",
   "images": {
     "hero": "/images/kallionsylissa.jpeg",
     "profile": "/images/riikka-potretti.jpeg",
@@ -45,7 +45,13 @@
   "cta": {
     "heading": "Ready to find your voice?",
     "text": "Hobbyists and professionals of all levels and ages are welcome, regardless of musical genre.",
-    "primaryButton": { "text": "Book a lesson", "href": "https://pro.vello.fi/laulustudioriikka-ajanvaraus/" },
-    "secondaryButton": { "text": "Explore services", "href": "/en/for-you" }
+    "primaryButton": {
+      "text": "Book a lesson",
+      "href": "https://pro.vello.fi/laulustudioriikka-ajanvaraus/"
+    },
+    "secondaryButton": {
+      "text": "Explore services",
+      "href": "/en/for-you"
+    }
   }
 }
