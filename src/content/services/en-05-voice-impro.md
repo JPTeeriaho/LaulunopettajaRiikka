@@ -1,6 +1,6 @@
 ---
 title: "Voice Impro — Play with your voice!"
-image: "/images/kalle-elaytyy.jpeg"
+image: "/images/riikka-pallomeressa.jpg"
 lang: en
 order: 5
 ---

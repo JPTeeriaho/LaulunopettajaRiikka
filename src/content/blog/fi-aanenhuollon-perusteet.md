@@ -1,5 +1,5 @@
 ---
-title: "Äänenhuollon perusteet"
+title: "Laulatko omalla äänelläsi vai jonkun toisen?"
 category: "Opetus"
 date: "2023-08-20"
 excerpt: "Ääni on työkalu, jota täytyy huoltaa. Tässä artikkelissa jaamme parhaat vinkit äänen lämmittelyyn ja palautumiseen..."

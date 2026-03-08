@@ -2,12 +2,12 @@
   "seoDescription": "Oppilaiden kokemuksia ja palautteita Riikka Vuorijärven laulutunneista ja äänivalmennuksista.",
   "images": {
     "hero": "/images/kolme-laulavaa-naista.jpg",
-    "decorative1": "/images/sauli.jpeg",
-    "decorative2": "/images/kukkakimara.jpeg"
+    "decorative1": "/images/toivo-ja-kalle.jpeg",
+    "decorative2": "/images/toivo-soittaa.jpeg"
   },
   "hero": {
     "title": "Palautteita",
-    "subtitle": "Kokemuksia ja tarinoita yhteisistä hetkistä laulun, äänenkäytön ja musiikin parissa.",
+    "subtitle": "\"Olen häkeltynyt uuden ääneni voimasta ja ilmaisullisista ulottuvuuksista. Enkä ole ainoa, joka hämmästelee ääneni nopeaa kehittymistä!\" Nainen, 41, arvopaperivälittäjä",
     "ctaText": "Lue tarinat",
     "ctaHref": "#kokemuksia"
   },

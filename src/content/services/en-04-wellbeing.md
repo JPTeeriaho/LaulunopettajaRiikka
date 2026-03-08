@@ -1,6 +1,6 @@
 ---
 title: "Experience the wellbeing benefits of singing"
-image: "/images/vaaleanpunaa.jpeg"
+image: "/images/kasi-sydamella.jpeg"
 lang: en
 order: 4
 ---

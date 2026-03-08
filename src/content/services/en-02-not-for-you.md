@@ -1,6 +1,6 @@
 ---
 title: "Do you feel that singing isn't for you?"
-image: "/images/toivo-ja-kalle.jpeg"
+image: "/images/risaiset-koskettimet.jpg"
 lang: en
 order: 2
 ---

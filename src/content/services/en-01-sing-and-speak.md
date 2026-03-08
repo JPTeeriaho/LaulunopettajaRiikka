@@ -1,6 +1,6 @@
 ---
 title: "Sing and speak with ease!"
-image: "/images/eila-estradilla.jpg"
+image: "/images/singer-under-gentle-lighting.jpg"
 lang: en
 order: 1
 ---

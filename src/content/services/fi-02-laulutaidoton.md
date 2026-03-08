@@ -1,6 +1,6 @@
 ---
 title: "Laulutaidoton?"
-image: "/images/toivo-ja-kalle.jpeg"
+image: "/images/risaiset-koskettimet.jpg"
 lang: fi
 order: 2
 ---

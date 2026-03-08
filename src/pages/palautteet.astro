@@ -56,28 +56,26 @@ const improTestimonials = (await getCollection("testimonials", ({ data }) => dat
       <div class="h-1.5 w-24 bg-terracotta mx-auto rounded-full"></div>
     </div>
 
-    <!-- Decorative images -->
-    <div class="flex justify-center gap-6 mb-16">
-      <div class="w-32 h-32 rounded-full overflow-hidden shadow-lg hidden md:block">
-        <OptimizedImage src={pageData.images.decorative1} alt="Sauli" class="w-full h-full object-cover" />
-      </div>
-      <div class="w-32 h-32 rounded-full overflow-hidden shadow-lg hidden md:block">
-        <OptimizedImage
-          src={pageData.images.decorative2}
-          alt="Kukkakimppu"
-          class="w-full h-full object-cover"
-        />
-      </div>
+    <!-- Decorative landscape image -->
+    <div class="max-w-2xl mx-auto mb-16 rounded-xl overflow-hidden shadow-lg hidden md:block">
+      <OptimizedImage src={pageData.images.decorative1} alt="Toivo ja Kalle" class="w-full h-auto object-cover" />
     </div>
 
     <div class="space-y-12">
       {
-        longTestimonials.map((t) => (
-          <TestimonialCard
-            quote={t.body}
-            author={t.data.author}
-            variant="full"
-          />
+        longTestimonials.map((t, i) => (
+          <>
+            <TestimonialCard
+              quote={t.body}
+              author={t.data.author}
+              variant="full"
+            />
+            {i === 1 && (
+              <div class="max-w-2xl mx-auto rounded-xl overflow-hidden shadow-lg hidden md:block">
+                <OptimizedImage src={pageData.images.decorative2} alt="Toivo soittaa" class="w-full h-auto object-cover" />
+              </div>
+            )}
+          </>
         ))
       }
     </div>

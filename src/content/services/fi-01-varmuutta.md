@@ -1,6 +1,6 @@
 ---
 title: "Varmuutta lauluun ja puheeseen"
-image: "/images/eila-estradilla.jpg"
+image: "/images/singer-under-gentle-lighting.jpg"
 lang: fi
 order: 1
 ---

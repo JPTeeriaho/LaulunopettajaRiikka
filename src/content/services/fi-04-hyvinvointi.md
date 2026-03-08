@@ -1,6 +1,6 @@
 ---
 title: "Hyvinvointia äänestä"
-image: "/images/vaaleanpunaa.jpeg"
+image: "/images/kasi-sydamella.jpeg"
 lang: fi
 order: 4
 ---

@@ -131,6 +131,7 @@ collections:
               - { label: "Hero-taustakuva", name: "hero", widget: "image" }
               - { label: "Esittelykuva 1", name: "introImg1", widget: "image" }
               - { label: "Esittelykuva 2", name: "introImg2", widget: "image" }
+              - { label: "Esittelykuva 3", name: "introImg3", widget: "image" }
           - label: "Hero"
             name: "hero"
             widget: "object"
@@ -176,6 +177,7 @@ collections:
               - { label: "Hero background", name: "hero", widget: "image" }
               - { label: "Intro image 1", name: "introImg1", widget: "image" }
               - { label: "Intro image 2", name: "introImg2", widget: "image" }
+              - { label: "Intro image 3", name: "introImg3", widget: "image" }
           - label: "Hero"
             name: "hero"
             widget: "object"
@@ -234,6 +236,7 @@ collections:
             widget: "object"
             fields:
               - { label: "Otsikko", name: "title", widget: "string" }
+              - { label: "Alaotsikko", name: "subtitle", widget: "string", required: false }
           - label: "Profiili"
             name: "profile"
             widget: "object"
@@ -292,6 +295,7 @@ collections:
             widget: "object"
             fields:
               - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
           - label: "Profile"
             name: "profile"
             widget: "object"

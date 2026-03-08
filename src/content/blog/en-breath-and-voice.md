@@ -1,5 +1,5 @@
 ---
-title: "Breath and Voice"
+title: "Your body as your ultimate singing guru"
 category: "Wellbeing"
 date: "2023-10-15"
 excerpt: "Explore the role of breathing for the voice and how to free it. How conscious breathing can transform your expression..."

@@ -24,7 +24,9 @@ const {
 } = Astro.props;
 
 // Map bg-position classes to object-position classes
-const objectPosition = bgPosition === "bg-center" ? "object-center" : bgPosition === "bg-bottom" ? "object-bottom" : "object-top";
+const objectPosition = bgPosition
+  ? bgPosition.replace(/\bbg-/g, "object-")
+  : "object-top";
 ---
 
 <section class={`relative ${height} w-full overflow-hidden`}>

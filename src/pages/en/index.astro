@@ -18,7 +18,7 @@ import pageData from "../../data/home-en.json";
     ctaText={pageData.hero.ctaText}
     ctaHref={pageData.hero.ctaHref}
     backgroundImage={pageData.images.hero}
-    bgPosition="bg-[20%_top] md:bg-top"
+    bgPosition="bg-[50%_top] md:bg-top"
   />
 
   <!-- Intro Content -->
@@ -66,16 +66,17 @@ import pageData from "../../data/home-en.json";
         </div>
         <div class="space-y-4">
           <div
-            class="h-48 rounded-2xl overflow-hidden shadow-lg bg-primary/10 flex items-center justify-center"
+            class="h-48 rounded-2xl overflow-hidden shadow-lg"
           >
-            <span
-              class="material-symbols-outlined text-6xl text-primary/40"
-              >music_note</span
-            >
+            <OptimizedImage
+              alt="Kalle performing"
+              class="w-full h-full object-cover"
+              src={pageData.images.introImg3}
+            />
           </div>
           <div class="h-64 rounded-2xl overflow-hidden shadow-lg">
             <OptimizedImage
-              alt="Toivo and Kalle"
+              alt="Minna performing"
               class="w-full h-full object-cover"
               src={pageData.images.introImg2}
             />

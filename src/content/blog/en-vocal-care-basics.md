@@ -1,5 +1,5 @@
 ---
-title: "Vocal care basics"
+title: "Do you sing with your own voice?"
 category: "Teaching"
 date: "2023-08-20"
 excerpt: "Your voice is an instrument that needs care. In this article we share the best tips for warming up and recovering your voice..."

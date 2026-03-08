@@ -3,11 +3,12 @@
   "images": {
     "hero": "/images/kallionsylissa.jpeg",
     "profile": "/images/riikka-potretti.jpeg",
-    "art1": "/images/sarkynyt-sydan.jpg",
+    "art1": "/images/nuottiavain.jpeg",
     "art2": "/images/mansikkasanko.jpeg"
   },
   "hero": {
-    "title": "Riikka"
+    "title": "Riikka",
+    "subtitle": "Laulajan instrumentti on koko kehomieli"
   },
   "profile": {
     "label": "Tietoa minusta",

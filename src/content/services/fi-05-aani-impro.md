@@ -1,6 +1,6 @@
 ---
 title: "Leiki äänelläsi!"
-image: "/images/kalle-elaytyy.jpeg"
+image: "/images/riikka-pallomeressa.jpg"
 lang: fi
 order: 5
 ---

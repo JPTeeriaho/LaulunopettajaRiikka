@@ -2,12 +2,12 @@
   "seoDescription": "Student experiences and testimonials from Riikka Vuorijärvi's singing lessons and vocal coaching sessions.",
   "images": {
     "hero": "/images/kolme-laulavaa-naista.jpg",
-    "decorative1": "/images/sauli.jpeg",
-    "decorative2": "/images/kukkakimara.jpeg"
+    "decorative1": "/images/toivo-ja-kalle.jpeg",
+    "decorative2": "/images/toivo-soittaa.jpeg"
   },
   "hero": {
     "title": "Testimonials",
-    "subtitle": "Experiences and stories from shared moments in singing, voice work and music.",
+    "subtitle": "\"I'm astonished by the power of my new voice and its expressive range. And I'm not the only one amazed at how quickly my voice has developed!\" Woman, 41, securities broker",
     "ctaText": "Read the stories",
     "ctaHref": "#experiences"
   },

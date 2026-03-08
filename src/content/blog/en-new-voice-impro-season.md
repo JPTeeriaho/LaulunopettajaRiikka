@@ -1,5 +1,5 @@
 ---
-title: "New Voice Impro season begins"
+title: "Voice as healing energy"
 category: "Events"
 date: "2023-09-01"
 excerpt: "Welcome to a new season! Voice improvisation offers a chance to discover your own unique resonance..."

@@ -3,7 +3,8 @@
   "images": {
     "hero": "/images/37hero.jpg",
     "introImg1": "/images/eila-estradilla.jpg",
-    "introImg2": "/images/toivo-ja-kalle.jpeg"
+    "introImg2": "/images/minna-elaytyy.jpeg",
+    "introImg3": "/images/kalle-elaytyy-rajattu.jpeg"
   },
   "hero": {
     "title": "Äänesi rinnallakulkija",
@@ -14,7 +15,7 @@
   "intro": {
     "heading": "Laulun lahjasi on tehty avattavaksi",
     "text": "Olen oululainen laulunopettaja ja musiikkipedagogi yli vuosikymmenen kokemuksella. Opetan Oulun Karjasillalla osuuskunta Lilithin alaisuudessa. Oppilaspaikkoja vapautuu silloin tällöin. Kaikentasoiset harrastajat ja ammattilaiset ovat tervetulleita, musiikin tyylilajiin katsomatta. Korkea ikä ei ole este!",
-    "note": "Hox! Laulutunneista on apua myös esiintymisjännittäjille ja puhetyöläisille.",
+    "note": "Hox! Laulutunneista on apua myös esiintymisjännittäjille ja puhetyöläisille. Singing lessons available also in English.",
     "readMoreText": "Lue lisää minusta",
     "readMoreHref": "/riikka",
     "quoteText": "Aito tunne on paras äänenavaus!"

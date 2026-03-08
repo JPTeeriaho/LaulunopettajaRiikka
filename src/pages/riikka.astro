@@ -21,9 +21,16 @@ import pageData from "../data/riikka-fi.json";
     <div
       class="relative h-full flex items-center justify-center text-center px-4"
     >
-      <h1 class="text-white text-6xl md:text-8xl font-black tracking-tighter">
-        {pageData.hero.title}
-      </h1>
+      <div class="space-y-4">
+        <h1 class="text-white text-6xl md:text-8xl font-black tracking-tighter">
+          {pageData.hero.title}
+        </h1>
+        {pageData.hero.subtitle && (
+          <p class="text-white/90 text-xl md:text-2xl font-light italic">
+            {pageData.hero.subtitle}
+          </p>
+        )}
+      </div>
     </div>
   </section>
 
@@ -81,7 +88,7 @@ import pageData from "../data/riikka-fi.json";
       <div class="grid grid-cols-2 gap-4">
         <div class="rounded-lg overflow-hidden h-64 shadow-lg">
           <OptimizedImage
-            alt="Särkynyt sydän -taideteos"
+            alt="Nuottiavain"
             class="w-full h-full object-cover object-top"
             loading="lazy"
             src={pageData.images.art1}
