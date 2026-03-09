@@ -1,6 +1,6 @@
 ---
-title: "Voice Impro — Play with your voice!"
-image: "/images/riikka-pallomeressa.jpg"
+title: Voice Impro — Play with your voice!
+image: /images/pallomeressämuokattu.jpg
 lang: en
 order: 5
 ---
