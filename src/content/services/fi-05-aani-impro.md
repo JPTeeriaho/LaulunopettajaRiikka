@@ -1,6 +1,6 @@
 ---
-title: "Leiki äänelläsi!"
-image: "/images/riikka-pallomeressa.jpg"
+title: Leiki äänelläsi!
+image: /images/pallomeressämuokattu.jpg
 lang: fi
 order: 5
 ---
