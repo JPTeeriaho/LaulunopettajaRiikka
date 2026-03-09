@@ -17,16 +17,16 @@ import pageData from "../data/riikka-fi.json";
       class="absolute inset-0 w-full h-full object-cover object-top"
       loading="eager"
     />
-    <div class="absolute inset-0 bg-gradient-to-b from-[rgba(0,0,0,0.1)] to-[rgba(0,0,0,0.3)]"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-[rgba(0,0,0,0.05)] to-[rgba(0,0,0,0.18)]"></div>
     <div
       class="relative h-full flex items-center justify-center text-center px-4"
     >
       <div class="space-y-4">
-        <h1 class="text-white text-6xl md:text-8xl font-black tracking-tighter">
+        <h1 class="text-white text-6xl md:text-8xl font-black tracking-tighter [text-shadow:0_3px_18px_rgba(0,0,0,0.45)]">
           {pageData.hero.title}
         </h1>
         {pageData.hero.subtitle && (
-          <p class="text-white/90 text-xl md:text-2xl font-light italic">
+          <p class="text-white/90 text-xl md:text-2xl font-light italic [text-shadow:0_2px_12px_rgba(0,0,0,0.5)]">
             {pageData.hero.subtitle}
           </p>
         )}
@@ -36,14 +36,17 @@ import pageData from "../data/riikka-fi.json";
 
   <div class="max-w-6xl mx-auto px-6 py-16 lg:py-24">
     <!-- Profile section (text only, full width) -->
-    <section class="mb-24 max-w-4xl">
-      <span
-        class="text-primary font-bold uppercase tracking-widest text-sm mb-4 block"
-        >{pageData.profile.label}</span
-      >
-      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-slate-900">
-        {pageData.profile.title}
-      </h2>
+    <section class="mb-24 max-w-4xl mx-auto">
+      <div class="text-center mb-8">
+        <span
+          class="text-primary font-bold uppercase tracking-widest text-sm mb-4 block"
+          >{pageData.profile.label}</span
+        >
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900">
+          {pageData.profile.title}
+        </h2>
+        <div class="w-20 h-1 bg-primary mx-auto rounded-full"></div>
+      </div>
       <div class="space-y-6 text-lg text-slate-700 leading-relaxed">
         {
           pageData.profile.paragraphs.map((p) => (
@@ -59,7 +62,7 @@ import pageData from "../data/riikka-fi.json";
         {
           pageData.approach.map((section) => (
             <div>
-              <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+              <h3 class="text-2xl font-bold mb-4 flex items-center justify-center gap-2 text-center">
                 <span class="material-symbols-outlined text-primary"
                   >{section.icon}</span
                 >

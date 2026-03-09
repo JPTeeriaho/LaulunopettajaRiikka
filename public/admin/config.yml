@@ -2,6 +2,8 @@ backend:
   name: git-gateway
   branch: main
 
+site_url: "https://curious-shortbread-45a21e.netlify.app"
+
 # Mediatiedostot
 media_folder: "public/images"
 public_folder: "/images"
