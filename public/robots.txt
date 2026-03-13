@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://curious-shortbread-45a21e.netlify.app/sitemap-index.xml
+Sitemap: https://riikkavuorijarvi.fi/sitemap-index.xml

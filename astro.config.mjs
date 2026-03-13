@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://curious-shortbread-45a21e.netlify.app',
+  site: 'https://riikkavuorijarvi.fi',
   integrations: [
     sitemap({
       i18n: {

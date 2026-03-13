@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import homeFi from "../data/home-fi.json";
 import settings from "../data/settings.json";
 
 interface Props {
@@ -15,12 +16,12 @@ const {
   title,
   description = "Riikka Vuorijärvi — Laulunopettaja & Musiikkipedagogi, Oulu",
   lang = "fi",
-  ogImage = "/images/riikka-hero.jpg",
+  ogImage = homeFi.images.hero,
   alternateLang,
 } = Astro.props;
 
 const gaId = settings.googleAnalyticsId;
-const siteUrl = "https://curious-shortbread-45a21e.netlify.app";
+const siteUrl = Astro.site?.toString() ?? "https://riikkavuorijarvi.fi";
 const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
 const ogImageUrl = new URL(ogImage, siteUrl).href;
 const altLang = lang === "fi" ? "en" : "fi";
