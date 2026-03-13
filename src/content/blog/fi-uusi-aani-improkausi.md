@@ -4,7 +4,7 @@ category: Tapahtumat
 date: 2023-09-01
 excerpt: Ihmisen keho on kuin sointimalja, joka värähtelee omaa, ainutlaatuista
   taajuuttaan...
-image: /images/vaaleanpunaa.jpeg
+image: /images/meditative-singers.jpg
 lang: fi
 order: 2
 ---
