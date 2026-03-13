@@ -4,7 +4,7 @@ category: Tapahtumat
 date: 2023-06-01
 excerpt: Ääni-impro avaa uusia ovia luovuuteen ja vapauttaa mielen rajoittavista
   esteistä...
-image: /images/kesäpakettimainostausta.jpeg
+image: /images/vibrant-singers.jpg
 lang: fi
 order: 5
 ---
