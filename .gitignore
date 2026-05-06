@@ -26,3 +26,9 @@ pnpm-debug.log*
 # original full-size images (kept locally, not in repo)
 src/assets/images/originals/
 public/images/.optimized
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example
