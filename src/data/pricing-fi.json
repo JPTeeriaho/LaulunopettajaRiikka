@@ -1,12 +1,41 @@
 {
   "tableTitle": "Hinnasto",
-  "tableHeaders": { "service": "Palvelu", "duration": "Kesto", "price": "Hinta" },
+  "tableHeaders": {
+    "service": "Palvelu",
+    "duration": "Kesto",
+    "price": "Hinta"
+  },
   "footnote": "Käyttö vapaaseen tahtiin. Maksu ePassilla mahdollinen.",
   "items": [
-    { "name": "Kokeilutunti uusille asiakkaille", "price": "30 €", "duration": "45 min" },
-    { "name": "Yksittäinen laulutunti", "price": "55 €", "duration": "45 min" },
-    { "name": "Laulutuntipaketti 7 kertaa", "price": "350 €", "duration": "7 × 45 min" },
-    { "name": "Ääni-improryhmä kausi", "price": "75 €", "duration": "" },
-    { "name": "Työpajat ryhmille", "price": "Kysy tarjous", "duration": "" }
+    {
+      "name": "Kokeilutunti uusille asiakkaille",
+      "price": "30 €",
+      "duration": "45 min"
+    },
+    {
+      "name": "Yksittäinen laulutunti",
+      "price": "55 €",
+      "duration": "45 min"
+    },
+    {
+      "name": "Laulutuntipaketti 7 kertaa",
+      "price": "350 €",
+      "duration": "7 × 45 min"
+    },
+    {
+      "name": "Ääni-improryhmä kausi",
+      "price": "75 €",
+      "duration": ""
+    },
+    {
+      "name": "Työpajat ryhmille",
+      "price": "Kysy tarjous",
+      "duration": ""
+    },
+    {
+      "name": "KESÄPAKETTI (käyttöaika kesä -- elokuu 2026)",
+      "price": "180 €",
+      "duration": "4 X 45 min"
+    }
   ]
 }
